@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login Page of SABKA BAZAAR where user can login to their account to shop">
+    
+    <link rel="stylesheet" href="../../styles/css/external/reset.css">
+    <link rel="stylesheet" href="../../styles/css/external/util.css">
+    <link rel="stylesheet" href="../../styles/css/navbar.css">
+    <link rel="stylesheet" href="../../styles/css/login.css">
+    
+    <title>Login | SABKA BAZAAR</title>
+</head>
+<body>
+    <nav class="main-nav">
+        <section class="container d-flex space-between">
+            <img src="../../../static/images/logo.png" class="main-logo" alt="sabka-bazaar-logo">
+            
+            <section class="nav-links-section d-flex-column">
+                <div class="nav-auth">
+                    <ul>
+                        <li class="d-inline-block"><a>SignIn</a></li>
+                        <li class="d-inline-block"><a href="../registerPage/register.html">Register</a></li>
+                    </ul>
+                </div>
+                <div class="nav-pages d-flex space-between align-items-center">
+                    <div class="main-pages-nav">
+                        <ul>
+                            <li class="d-inline-block"><a>Home</a></li>
+                            <li class="d-inline-block"><a>Products</a></li>
+                        </ul>
+                    </div>
+                    <a class="checkout-nav" href="">
+                        <div>
+                            <img src="../../../static/images/cart.svg" class="cart-logo d-inline-block" alt="cart-logo">
+                        </div>
+                        <span class="cart-items d-inline-block">0 Items</span>
+                    </a>
+                </div>
+            </section>
+        </section>    
+    </nav>
+    <!-- End of Navbar -->
+
+    <section class="container content">
+        <section class="heading-section">
+            <h1>Login</h1>
+            <p class="margin-y-t-3">Get access to your Orders, Wishlist and Recommendations</p>
+        </section>
+        <main class="login-form">
+            <form action="../../homePage/home.html">       
+                <div class="form-element">
+                    <label for="email">Email
+                        <input type="email" name="email" id="email" > 
+                        <!-- placeholder="Email" -->
+                    </label>
+                </div>
+                <div class="form-element">
+                    <label for="password">Password
+                        <input type="password" name="password" id="password" >
+                        <!-- placeholder="Password" -->
+                    </label>
+                </div>
+                <div class="form-element">
+                    <button type="submit" class="app-btn submit-btn">Login</button>
+                </div>
+
+            </form>
+        </main>
+
+    </section>
+
+    <footer>
+        <div class="container">
+            Copyright © 2011-2018 Sabka Bazaar Grocery Supplies Pvt Ltd
+        </div>
+    </footer>
+
+</body>
+</html>
