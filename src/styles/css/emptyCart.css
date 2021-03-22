@@ -1,0 +1,29 @@
+.empty-cart-nav {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
+.empty-cart-nav a {
+    color: #fff;
+}
+.nav-logo {
+    font-size: 0.8rem;
+}
+.message-section {
+    text-align: center;
+    margin-top: 180px;
+}
+.message-section h2{
+    font-size: 1.1rem;
+}
+.checkout-btn {
+    position: absolute;
+    bottom: 0;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 1rem;
+    display: block;
+    width: 95%;
+}
+

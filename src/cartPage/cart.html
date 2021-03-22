@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cart Page of sabka bazaar where user can look at items which they are going to purchase">
+    
+    <link rel="stylesheet" href="../styles/css/external/reset.css">
+    <link rel="stylesheet" href="../styles/css/external/util.css">
+    <link rel="stylesheet" href="../styles/css/navbar.css">
+    <link rel="stylesheet" href="../styles/css/cart.css">
+
+    <title>Cart Page | Sabka Baazar</title>
+</head>
+<body>
+    <!-- main nav desktop -->
+    <nav class="main-nav">
+        <section class="d-flex space-between">
+            <a href="../homePage/home.html">
+                <img src="../../../static/images/logo.png" class="main-logo" alt="sabka-bazaar-logo">
+            </a>
+            
+            <section class="nav-links-section d-flex-column">
+                <div class="nav-auth">
+                    <ul>
+                        <li class="d-inline-block"><a href="../authPage/loginPage/login.html">SignIn</a></li>
+                        <li class="d-inline-block"><a href="../authPage/registerPage/register.html">Register</a></li>
+                    </ul>
+                </div>
+                <div class="nav-pages d-flex space-between align-items-center">
+                    <div class="main-pages-nav">
+                        <ul>
+                            <li class="d-inline-block"><a href="../homePage/home.html">Home</a></li>
+                            <li class="d-inline-block"><a href="../productsPage/fruitsPage/fruits.html">Products</a></li>
+                        </ul>
+                    </div>
+                    <a class="cart-nav">
+                        <div>
+                            <img src="../../../static/images/cart.svg" class="cart-logo d-inline-block" alt="cart-logo">
+                        </div>
+                        <span class="cart-items d-inline-block">1 Item</span>
+                    </a>
+                </div>
+            </section>
+        </section>    
+    </nav>
+
+    <!-- main nav mobile -->
+    <nav class="main-nav-mob">
+        <section class="d-flex space-between">
+            <a href="../homePage/home.html">
+                <img src="../../../static/images/logo.png" class="main-logo" alt="sabka-bazaar-logo">
+            </a>
+
+            <a class="cart-nav cart-mob">
+                <div>
+                    <img src="../../../static/images/cart.svg" class="cart-logo d-inline-block" alt="cart-logo">
+                </div>
+                <span class="cart-items d-inline-block">1 Item</span>
+            </a>
+        </section>    
+    </nav>
+
+    <!-- End of Navbar -->
+
+    <header class="cart-header">
+        <h1>My Cart <span>(1 item)</span></h1>
+    </header>
+
+    <section class="items-section">
+        <div class="items">
+            <img src="../../../static/images/products/fruit-n-veg/apple.jpg" alt="kiwi-green" class="item-img">
+            
+            <div class="item-contents">
+                <div class="items-heading">
+                    <h2>Apple - Washington, Regular, 4 pcs</h2>
+                </div>
+
+                <div class="item-details">
+                    <div class="item-quantity">
+                        <button class="app-btn cart-btn">--</button>
+                            <span class="item-qnty"> 1 </span> 
+                        <button class="app-btn cart-btn">+</button>
+                        <span class="item-qnty">X</span> Rs.187
+                    </div>
+
+                    <div class="item-rate">
+                        <span class="rate">Rs.187</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="offer-detail d-flex space-between align-items-center">
+        <img src="../../static/images/lowest-price.png" alt="lowest-price-img" height="40px" width="auto">
+        <p>You won't find it cheaper anywhere</p>
+    </section>
+    
+    <section class="checkout-section">
+        <p>
+            Promo code can be applied on payment page
+        </p>
+        <a class="app-btn checkout-btn">
+            <span>Proceed to Checkout</span>
+            <span>Rs.187</span>
+        </a>
+    </section>
+
+</body>
+</html>
