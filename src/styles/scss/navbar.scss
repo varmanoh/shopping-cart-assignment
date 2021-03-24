@@ -22,6 +22,7 @@ a {
 }
 .nav-auth {
 	text-align: right;
+	padding: 5px 10px 0 0;
 }
 .main-pages-nav {
 	a {
@@ -30,7 +31,6 @@ a {
 }
 .nav-pages {
 	align-items: center;
-	margin-top: 3px;
 }
 .cart-nav {
 	justify-content: space-around;
@@ -53,6 +53,9 @@ a {
 		height: 70px;
 		width: auto;
 	}
+	.nav-links-section {
+		margin-left: 15px;
+	}
 }
 @media (min-width: 1255px) {
 	.container {
@@ -70,7 +73,7 @@ a {
 		width: 37px;
 	}
 	.nav-pages {
-		margin-top: 10px;
+		margin-top: 5px;
 	}
 	.cart-nav {
 		width: 17%;

@@ -26,13 +26,13 @@
 
 .desktop-nav-list li {
   font-size: 0.9rem;
-  padding: 10px 0;
+  padding: 10px 20px;
   margin-top: 10px; }
 
 .desktop-nav-list a {
   color: #666666; }
 
-@media (min-width: 1255px) {
+@media (min-width: 480px) {
   .products-nav-mobile {
     display: none; }
   .products-nav {

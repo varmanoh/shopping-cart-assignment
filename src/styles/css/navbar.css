@@ -21,14 +21,14 @@ a {
   margin-left: 5px; }
 
 .nav-auth {
-  text-align: right; }
+  text-align: right;
+  padding: 5px 10px 0 0; }
 
 .main-pages-nav a {
   padding: 15px 2px; }
 
 .nav-pages {
-  align-items: center;
-  margin-top: 3px; }
+  align-items: center; }
 
 .cart-nav {
   justify-content: space-around;
@@ -48,7 +48,9 @@ a {
   .main-logo {
     margin-top: 6px;
     height: 70px;
-    width: auto; } }
+    width: auto; }
+  .nav-links-section {
+    margin-left: 15px; } }
 
 @media (min-width: 1255px) {
   .container {
@@ -62,7 +64,7 @@ a {
   .cart-logo {
     width: 37px; }
   .nav-pages {
-    margin-top: 10px; }
+    margin-top: 5px; }
   .cart-nav {
     width: 17%; }
   .nav-links-section {
