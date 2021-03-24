@@ -85,14 +85,14 @@ body {
   display: flex;
   justify-content: space-between; }
 
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .main-nav-mob {
     display: none; }
   .main-nav {
     display: block; }
   .main-logo {
-    height: 90%; }
+    height: 75px; }
   .cart-nav {
-    width: 12%; }
+    width: 25%; }
   .nav-auth {
     margin-right: 10px; } }

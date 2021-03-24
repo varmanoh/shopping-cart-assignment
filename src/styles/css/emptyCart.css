@@ -26,4 +26,14 @@
     display: block;
     width: 95%;
 }
+@media (min-width:480px) {
+    .checkout-btn {
+        width: 97%;
+    }
+}
+@media (min-width:980px) {
+    .checkout-btn {
+        width: 98.5%;
+    }
+}
 

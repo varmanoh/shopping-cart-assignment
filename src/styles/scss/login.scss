@@ -1,3 +1,13 @@
+.my-label {
+	display: inline-block;
+	color: #99d9ea;
+}
+.main-nav {
+	display: none;
+}
+.login-logo {
+	margin-bottom: 10px;
+}
 .content {
 	display: flex;
 	flex-direction: column;
@@ -32,10 +42,18 @@
 		}
 	}
 }
-@media (min-width: 640px) {
+@media (min-width: 480px) {
 	.content {
 		flex-direction: row;
 	}
+	.main-nav-mob {
+		display: none;
+	}
+	.main-nav {
+		display: block;
+	}
+}
+@media (min-width: 1255px) {
 	.heading-section {
 		padding: 50px 0 10px 100px;
 	}

@@ -1,3 +1,6 @@
+.main-nav {
+	display: none;
+}
 .card-section {
 	display: flex;
 	flex-direction: column;
@@ -35,12 +38,20 @@
 	display: none;
 	margin: 10px auto;
 }
-@media (min-width: 640px) {
+@media (min-width:480px) {
+	.main-nav-mob {
+		display: none;
+	}
+	.main-nav {
+		display: block;
+	}
+}
+@media (min-width: 1255px) {
 	.card-section {
 		width: 730.07px;
 		height: auto;
 		margin-top: 20px;
-		padding: 0 15px;
+		padding: 0 10px;
 		justify-content: space-between;
 		flex-direction: row;
 		flex-wrap: wrap;
