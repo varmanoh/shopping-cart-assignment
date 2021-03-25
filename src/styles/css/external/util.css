@@ -156,6 +156,9 @@ footer {
     border: none;
     cursor: pointer;
 }
+.app-btn:hover {
+    background-color: #ff0066;
+}
 
 .focusable:active,
 .focusable:focus {

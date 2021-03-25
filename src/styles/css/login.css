@@ -24,7 +24,7 @@
   margin: 15px 0; }
   .form-element label {
     color: #808080;
-    display: block; }
+    display: none; }
   .form-element input {
     padding: 10px 0;
     display: block;
@@ -34,6 +34,8 @@
     width: 100%; }
     .form-element input:focus {
       border-color: #99d9ea; }
+      .form-element input:focus::placeholder {
+        color: transparent; }
   .form-element:focus-within .control-label {
     color: #00c6fd; }
 
