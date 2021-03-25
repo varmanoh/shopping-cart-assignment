@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register Page of SABKA BAZAAR where user can register themselves to Sabka Bazaar and shop">
+    
+    <link rel="stylesheet" href="../../styles/css/external/reset.css">
+    <link rel="stylesheet" href="../../styles/css/external/util.css">
+    <link rel="stylesheet" href="../../styles/css/navbar.css">
+    <link rel="stylesheet" href="../../styles/css/login.css">
+    
+    <title>Register | SABKA BAZAAR</title>
+</head>
+<body>
+    <nav class="main-nav">
+        <section class="container d-flex space-between">
+            <img src="../../../static/images/logo.png" class="main-logo" alt="sabka-bazaar-logo">
+            
+            <section class="nav-links-section d-flex-column">
+                <div class="nav-auth">
+                    <ul>
+                        <li class="d-inline-block"><a href="../loginPage/login.html">SignIn</a></li>
+                        <li class="d-inline-block"><a>Register</a></li>
+                    </ul>
+                </div>
+                <div class="nav-pages d-flex space-between align-items-center">
+                    <div class="main-pages-nav">
+                        <ul>
+                            <li class="d-inline-block"><a>Home</a></li>
+                            <li class="d-inline-block"><a>Products</a></li>
+                        </ul>
+                    </div>
+                    <a class="cart-nav" href="">
+                        <div>
+                            <img src="../../../static/images/cart.svg" class="cart-logo d-inline-block" alt="cart-logo">
+                        </div>
+                        <span class="cart-items d-inline-block">0 Items</span>
+                    </a>
+                </div>
+            </section>
+        </section>    
+    </nav>
+
+    <!-- main nav mobile -->
+    <nav class="main-nav-mob">
+        <section class=" container d-flex space-between">
+            <img src="../../../static/images/logo.png" class="main-logo login-logo" alt="sabka-bazaar-logo">
+
+            <div class="nav-auth d-flex align-items-center margin-r">
+                <ul>
+                    <li class="d-inline-block"><a href="../loginPage/login.html">SignIn</a></li>
+                </ul>
+            </div>
+        </section>    
+    </nav>
+
+    <!-- End of Navbar -->
+
+    <section class="container content">
+        <section class="heading-section">
+            <h1>Signup</h1>
+            <p class="margin-y-t-3">We do not share your personal details with anyone.</p>
+        </section>
+        <main class="login-form">
+            <form>
+                <div class="form-element">
+                    <label for="first-name" class="control-label">First Name
+                        <input type="first-name" name="first-name" id="first-name" > 
+                        <!-- placeholder="First-name" -->
+                    </label>
+                </div>
+                <div class="form-element">
+                    <label for="last-name" class="control-label">Last Name
+                        <input type="last-name" name="last-name" id="last-name" > 
+                        <!-- placeholder="Last Name" -->
+                    </label>
+                </div>                         
+                <div class="form-element">
+                    <label for="email" class="control-label">Email
+                        <input type="email" name="email" id="email" > 
+                        <!-- placeholder="Email" -->
+                    </label>
+                </div>
+                <div class="form-element">
+                    <label for="password" class="control-label">Password
+                        <input type="password" name="password" id="password" >
+                        <!-- placeholder="Password" -->
+                    </label>
+                </div>
+                <div class="form-element">
+                    <label for="confirm-password" class="control-label">Confirm Password
+                        <input type="confirm-password" name="confirm-password" id="confirm-password" >
+                        <!-- placeholder="Confirm Password" -->
+                    </label>
+                </div> 
+                <div class="form-element">
+                    <button type="submit" class="app-btn submit-btn">Signup</button>
+                </div>
+
+            </form>
+        </main>
+
+    </section>
+
+    <footer>
+        <div class="login-footer">
+            Copyright © 2011-2018 Sabka Bazaar Grocery Supplies Pvt Ltd
+        </div>
+    </footer>
+</body>
+</html>

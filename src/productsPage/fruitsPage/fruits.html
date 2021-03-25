@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product page of Sabka Bazaar where user can go through various products and also product categories in the menu bar">
+    
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../../styles/css/external/reset.css">
+    <link rel="stylesheet" href="../../styles/css/external/util.css">
+    <link rel="stylesheet" href="../../styles/css/navbar.css">
+    <link rel="stylesheet" href="../../styles/css/productNavbar.css">
+
+    <link rel="stylesheet" href="../../styles/css/products.css">
+    
+    <title>Products | SABKA BAZAAR</title>
+</head>
+<body>
+    <nav class="main-nav">
+        <section class="container d-flex space-between">
+            <img src="../../../../static/images/logo.png" class="main-logo" alt="sabka-bazaar-logo">
+            
+            <section class="nav-links-section d-flex-column">
+                <div class="nav-auth">
+                    <ul>
+                        <li class="d-inline-block"><a href="../../authPage/loginPage/login.html">SignIn</a></li>
+                        <li class="d-inline-block"><a href="../../authPage/registerPage/register.html">Register</a></li>
+                    </ul>
+                </div>
+                <div class="nav-pages d-flex space-between align-items-center">
+                    <div class="main-pages-nav">
+                        <ul>
+                            <li class="d-inline-block"><a href="../../homePage/home.html">Home</a></li>
+                            <li class="d-inline-block"><a href="../../productsPage/fruitsPage/fruits.html">Products</a></li>
+                        </ul>
+                    </div>
+                    <a class="cart-nav" href="../../cartPage/cart.html">
+                        <div>
+                            <img src="../../../../static/images/cart.svg" class="cart-logo d-inline-block" alt="cart-logo">
+                        </div>
+                        <span class="cart-items d-inline-block">0 Items</span>
+                    </a>
+                </div>
+            </section>
+        </section>    
+    </nav>
+
+    <!-- main nav mobile -->
+    <nav class="main-nav-mob">
+        <section class="d-flex space-between">
+            <a href="../../homePage/home.html">
+                <img src="../../../static/images/logo.png" class="main-logo" alt="sabka-bazaar-logo">
+            </a>
+
+            <a href="../../cartPage/cart.html" class="cart-nav cart-mob">
+                <div>
+                    <img src="../../../static/images/cart.svg" class="cart-logo d-inline-block" alt="cart-logo">
+                </div>
+                <span class="cart-items d-inline-block">0 Item</span>
+            </a>
+        </section>    
+    </nav>
+
+    <!-- End of Navbar -->
+    <!-- Begining of products navbar mobile -->
+    <nav class="products-nav-mobile">
+        <div class="mobile-navbar container">
+            <div class="d-flex space-between align-items-center ">
+                <h1 class="nav-logo">Fruits and Vegetables</h1>
+                <button onclick="openCloseMenu()" class="menu-bar app-btn"><i class="fas fa-chevron-down fa-2x"></i></button>   
+            </div>
+            
+            <div class="drop-nav">
+                <ul class="mobile-nav-list">
+                    <li>
+                        <hr class="hr-style">
+                    </li>
+                    <li>
+                        <a href="../bakeryPage/bakery.html">Bakery and Dairy</a>
+                    </li>
+                    <li class="margin-y-t-1">
+                        <a href="../beautyPage/beauty.html">Beauty and Hygiene</a>
+                    </li>
+                    <li class="margin-y-t-1">
+                        <a href="../beveragePage/beverage.html">Beverages</a>
+                    </li>
+                    <li class="margin-y-t-1">
+                        <a href="../babyPage/baby.html">Baby Care</a>
+                    </li>
+                </ul>
+            </div>            
+        </div> 
+    </nav>
+
+    <!-- Main content with side menu -->
+    <section class="main-content container d-flex">
+        <nav class="products-nav">
+            <div class="side-nav">
+                <ul class="desktop-nav-list">
+                    <li>
+                        <a href="../fruitsPage/fruits.html">Fruits & Vegetables</a>
+                    </li>
+                    <hr class="hr-style grey"><li>
+                        <a href="../bakeryPage/bakery.html">Bakery Cakes and Dairy</a>
+                    </li>
+                    <hr class="hr-style grey">
+                    <li class="margin-y-t-1">
+                        <a href="../beveragePage/beverage.html">Beverages</a>
+                    </li>
+                    <hr class="hr-style grey">
+                    <li class="margin-y-t-1">
+                        <a href="../beautyPage/beauty.html">Beauty and Hygiene</a>
+                    </li>
+                    <hr class="hr-style grey">
+                    <li class="margin-y-t-1">
+                        <a href="../babyPage/baby.html">Baby Care</a>
+                    </li>
+                    <hr class="hr-style grey">
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main content Begins -->
+        <main>
+            <section class="card-section">
+                <div class="cards">
+                    <div class="card-heading">
+                        <h2>Fresho Kiwi - Green, 3pcs</h2>
+                    </div>
+                    <div class="card-contents d-flex">
+                        <img src="../../../static/images/products/fruit-n-veg/kiwi-green.jpg" alt="kiwi-green" class="product-img">
+                        <div class="card-details">
+                            <div class="card-text">
+                                Kiwis are oval shaped with a brownish outer skin. 
+                                The flesh is bright green and juicy with tiny, edible black seeds.
+                            </div>
+                            <button class="app-btn buy-btn">Buy Now @ Rs.87</button>
+                            <div class="buy-button-desktop">
+                                <span class="rate">MRP Rs.87</span>
+                                <button class="app-btn buy-btn-desktop">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="app-btn buy-btn-tablet">Buy Now @ Rs.87</button>
+                </div>
+                <div class="cards">
+                    <div class="card-heading">
+                        <h2>Apple - Washington, Regular, 4 pcs</h2>
+                    </div>
+                    <div class="card-contents d-flex">
+                        <img src="../../../static/images/products/fruit-n-veg/apple.jpg" alt="apple" class="product-img">
+                        <div class="card-details">
+                            <div class="card-text">
+                                The bright red coloured and heart shaped Washington apples are crunchy, juicy and 
+                                slightly sweet. Washington Apples are a natural source of fibre and are fat free.
+                            </div>
+                            <button class="app-btn buy-btn">Buy Now @ Rs.187</button>
+                            <div class="buy-button-desktop">
+                                <span class="rate">MRP Rs.187</span>
+                                <button class="app-btn buy-btn-desktop">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="app-btn buy-btn-tablet">Buy Now @ Rs.187</button>
+                </div>
+                <div class="cards">
+                    <div class="card-heading">
+                        <h2>Fresho Pomegranate Peeled, 500 gm</h2>
+                    </div>                
+                    <div class="card-contents d-flex">
+                        <img src="../../../static/images/products/fruit-n-veg/pomegrante.jpg" alt="pomegranate" class="product-img">
+                        <div class="card-details">
+                            <div class="card-text">
+                                Pomegranate variety has a glossy, vibrant and soft ruby-red skin. 
+                                The inside of the fruit is divided into compartments by thin white membranes.
+                            </div>
+                            <button class="app-btn buy-btn">Buy Now @ Rs.88</button>
+                            <div class="buy-button-desktop">
+                                <span class="rate">MRP Rs.88</span>
+                                <button class="app-btn buy-btn-desktop">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="app-btn buy-btn-tablet">Buy Now @ Rs.88</button>
+                </div>
+                <div class="cards">
+                    <div class="card-heading">
+                        <h2>Capsicum - Green, 1 kg</h2>
+                    </div>
+                    <div class="card-contents d-flex">
+                        <img src="../../../static/images/products/fruit-n-veg/capsicum-green.jpg" alt="capsicum" class="product-img">
+                        <div class="card-details">
+                            <div class="card-text">
+                                Leaving a moderately pungent taste on the tongue, Green capsicums, also known as green 
+                                peppers are bell shaped, medium-sized fruit pods.
+                            </div>
+                            <button class="app-btn buy-btn">Buy Now @ Rs.137</button>
+                            <div class="buy-button-desktop">
+                                <span class="rate">MRP Rs.137</span>
+                                <button class="app-btn buy-btn-desktop">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="app-btn buy-btn-tablet">Buy Now @ Rs.137</button>
+                </div>
+                <div class="cards">
+                    <div class="card-heading">
+                        <h2>Tomato - Local, Organically Grown, 500 gm</h2>
+                    </div>
+                    <div class="card-contents d-flex">
+                        <img src="../../../static/images/products/fruit-n-veg/tomato.jpg" alt="tomato" class="product-img">
+                        <div class="card-details">
+                            <div class="card-text">
+                                Fresho brings to you an exquisite range of locally grown organic tomatoes, which are now 
+                                available at bigbasket. These organic tomatoes are free from harmful pesticides and 
+                                insecticides.
+                            </div>
+                            <button class="app-btn buy-btn">Buy Now @ Rs.12</button>
+                            <div class="buy-button-desktop">
+                                <span class="rate">MRP Rs.12</span>
+                                <button class="app-btn buy-btn-desktop">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="app-btn buy-btn-tablet">Buy Now @ Rs.12</button>
+                </div>
+            </section>
+        </main>
+    </section>
+    
+    <footer>
+        <div class="product-footer">
+            Copyright © 2011-2018 Sabka Bazaar Grocery Supplies Pvt Ltd
+        </p>
+    </footer>
+    <script src="../../utils/productNavbar.js"></script>
+</body>
+</html>

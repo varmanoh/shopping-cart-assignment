@@ -1,0 +1,39 @@
+.products-nav-mobile {
+  background-color: #d00256;
+  color: #ffff;
+  margin: 20px auto;
+  padding: 10px 0;
+  display: block; }
+
+.nav-logo {
+  font-weight: 500;
+  font-size: 1.3rem; }
+
+.drop-nav {
+  display: none;
+  margin-top: 10px; }
+
+.mobile-nav-list li a {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ffff;
+  cursor: pointer; }
+
+.products-nav {
+  display: none;
+  background-color: #d2d2d2;
+  flex-basis: 30%; }
+
+.desktop-nav-list li {
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  margin-top: 10px; }
+
+.desktop-nav-list a {
+  color: #666666; }
+
+@media (min-width: 480px) {
+  .products-nav-mobile {
+    display: none; }
+  .products-nav {
+    display: block; } }

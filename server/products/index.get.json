@@ -41,7 +41,7 @@
   },
   {
     "name": "Tomato - Local, Organically Grown, 500 gm",
-    "imageURL": "/static/images/products/fruit-n-veg/capsicum-green.jpg",
+    "imageURL": "/static/images/products/fruit-n-veg/tomato.jpg",
     "description": "Fresho brings to you an exquisite range of locally grown organic tomatoes, which are now available at bigbasket. These organic tomatoes are free from harmful pesticides and insecticides.",
     "price": 12,
     "stock": 50,
@@ -172,7 +172,7 @@
   {
     "name": "Close Up Ever Fresh Red Hot Gel Toothpaste, 150 gm",
     "imageURL": "/static/images/products/beauty-hygiene/closeup.jpg",
-    "description": " Closeup's unique Active Zinc Mouthwash not only cleans deep corners of your mouth of residual germs it also gives you upto 12 Hours Fresh Breath.",
+    "description": "Closeup's unique Active Zinc Mouthwash not only cleans deep corners of your mouth of residual germs it also gives you upto 12 Hours Fresh Breath.",
     "price": 82,
     "stock": 50,
     "category": "5b68994e3d1a866534f516df",
