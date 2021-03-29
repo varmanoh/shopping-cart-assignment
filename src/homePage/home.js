@@ -44,7 +44,7 @@
         });
 
    
-    //----------------------- carousel -------------------logic for dot and button needs to be connected-----//
+    //----------------------- carousel ------------------------//
     let slideIndex = 1;
     let index;
     let dots = document.querySelectorAll(".dot");
@@ -53,20 +53,15 @@
 
     document.querySelector('.prev').addEventListener('click', () => plusSlides(-1));
     document.querySelector('.next').addEventListener('click', () => plusSlides(1));
-    dots.forEach(el => el.addEventListener('click', event => currentSlide(event.target.getAttribute("data-el"))));
-
+    
     function plusSlides(slideChange) {
-        // console.log('plusSlideChange before ' + slideChange);
-        // console.log('plusslideIndex before ' + slideIndex);
-        showSlides(slideIndex += slideChange);
-        // console.log('plusslide after ' + slideIndex);
-        // console.log('plusSlideChange after ' + slideChange);
+        showSlides(slideIndex = parseInt(slideIndex) + parseInt(slideChange));
     }
-
-
+    
+    dots.forEach(el => el.addEventListener('click', event => currentSlide(event.target.getAttribute("data-el"))));
+    
     function currentSlide(slideChange) {
         showSlides(slideIndex = slideChange);
-        // console.log('dot ' + slideIndex);
     }
 
     function showSlides(slideChange) {
