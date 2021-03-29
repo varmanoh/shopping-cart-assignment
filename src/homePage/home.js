@@ -3,18 +3,33 @@
 
     let productCategories = document.getElementById('product-category-cards');
 
+    const anchorTagPage = href => {
+        switch (href) {
+            case 'beverages':
+                return '../productsPage/beveragePage/beverage.html';
+            case 'bakery-cakes-dairy':
+                return '../productsPage/bakeryPage/bakery.html'
+            case 'beauty-hygiene':
+                return '../productsPage/beautyPage/beauty.html'
+            case 'baby':
+                return '../productsPage/babyPage/baby.html'
+            case 'fruit-and-veg':
+                return '../productsPage/fruitsPage/fruits.html'
+        }
+    }
+
     const filteredData = (categoryBanner) => `
         <div class="category-cards">
             <img src="../..${categoryBanner.imageUrl}" alt="${categoryBanner.name}" class="category-img">
             <div class="category-text">
                 <strong class="category-heading">${categoryBanner.name}</strong>
                 <p>${categoryBanner.description}</p>
-                <a href="../productsPage/fruitsPage/fruits.html" class="app-btn btn-category">Explore ${categoryBanner.key}</a>
+                <a href="${anchorTagPage(categoryBanner.key)}" class="app-btn btn-category">Explore ${categoryBanner.key}</a>
             </div>
         </div>
     `;
 
-    const categoryCard = (categoryBanner) => 
+    const categoryCard = (categoryBanner) =>
         categoryBanner.order > 0 ? filteredData(categoryBanner) : '';
 
     await fetch('../../server/categories/index.get.json')
@@ -43,7 +58,7 @@
             `;
         });
 
-   
+
     //----------------------- carousel ------------------------//
     let slideIndex = 1;
     let index;
@@ -53,13 +68,13 @@
 
     document.querySelector('.prev').addEventListener('click', () => plusSlides(-1));
     document.querySelector('.next').addEventListener('click', () => plusSlides(1));
-    
+
     function plusSlides(slideChange) {
         showSlides(slideIndex = parseInt(slideIndex) + parseInt(slideChange));
     }
-    
+
     dots.forEach(el => el.addEventListener('click', event => currentSlide(event.target.getAttribute("data-el"))));
-    
+
     function currentSlide(slideChange) {
         showSlides(slideIndex = slideChange);
     }
