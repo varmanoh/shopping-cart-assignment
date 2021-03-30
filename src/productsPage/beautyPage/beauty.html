@@ -35,12 +35,18 @@
                             <li class="d-inline-block"><a href="../../productsPage/fruitsPage/fruits.html">Products</a></li>
                         </ul>
                     </div>
-                    <a class="cart-nav" href="../../cartPage/cart.html">
+                    <a class="cart-nav cart-nav-tablet" href="../../cartPage/cart.html">
                         <div>
                             <img src="../../../../static/images/cart.svg" class="cart-logo d-inline-block" alt="cart-logo">
                         </div>
                         <span class="cart-items d-inline-block">0 Items</span>
                     </a>
+                    <div class="cart-nav cart-nav-desktop" onclick="loadCart()">
+                        <div>
+                            <img src="../../../../static/images/cart.svg" class="cart-logo d-inline-block" alt="cart-logo">
+                        </div>
+                        <span class="cart-items d-inline-block">0 Items</span>
+                    </div>
                 </div>
             </section>
         </section>    
@@ -138,7 +144,16 @@
         </div>
     </footer>
 
+    <div id="mini-cart" class="mini-cart">
+
+    </div>
+    
+    <div id="modal-background" class="modal-background">
+
+    </div>
+
     <script src="../productNavbar.js"></script>
+    <script src="../../cartPage/miniCart.js"></script>
     <script src="./beauty.js" type="module"></script>
 </body>
 </html>

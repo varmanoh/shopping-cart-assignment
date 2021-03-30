@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cart Page of sabka bazaar where user can look at items which they are going to purchase">
+    
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../styles/css/external/reset.css">
+    <link rel="stylesheet" href="../styles/css/external/util.css">
+    <link rel="stylesheet" href="../styles/css/navbar.css">
+    <link rel="stylesheet" href="../styles/css/miniCart.css">
+
+    <title>Cart Page | Sabka Baazar</title>
+</head>
+<body class="empty-cart">
+    <nav class="empty-cart-nav">
+        <div class="d-flex space-between align-items-center ">
+            <h1 class="nav-logo-cart">My Cart <span>(1 item)</span></h1>
+            <a onclick="this.parentNode.parentNode.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode.parentNode.parentNode); return false;" class="close-btn"><i class="fal fa-times fa-2x"></i></a>   
+        </div>      
+    </nav>
+
+    <section class="items-section">
+        <div class="items">
+            <img src="../../../static/images/products/fruit-n-veg/apple.jpg" alt="kiwi-green" class="item-img">
+            
+            <div class="item-contents">
+                <div class="items-heading">
+                    <h2>Apple - Washington, Regular, 4 pcs</h2>
+                </div>
+
+                <div class="item-details">
+                    <div class="item-quantity">
+                        <button class="app-btn cart-btn">&mdash;</button>
+                            <span class="item-qnty"> 1 </span> 
+                        <button class="app-btn cart-btn">+</button>
+                        <span class="item-qnty">X</span> Rs.187
+                    </div>
+
+                    <div class="item-rate">
+                        <span class="rate">Rs.187</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="offer-detail d-flex flex-start align-items-center">
+        <img src="../../static/images/lowest-price.png" alt="lowest-price-img" height="40px" width="auto">
+        <p>You won't find it cheaper anywhere</p>
+    </section>
+    
+    <section class="checkout-section">
+        <p>
+            Promo code can be applied on payment page
+        </p>
+        <a class="app-btn checkout-btn">
+            <span>Proceed to Checkout</span>
+            <span>Rs.187</span>
+        </a>
+    </section>
+<script src="./miniCart.js"></script>
+</body>
+</html>
