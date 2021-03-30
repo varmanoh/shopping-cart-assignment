@@ -5,6 +5,13 @@
   padding: 10px 0;
   display: block; }
 
+.menu-bar {
+  background-color: #d00256; }
+  .menu-bar:hover {
+    background-color: #d00256; }
+  .menu-bar:active {
+    background-color: #d00256; }
+
 .nav-logo {
   font-weight: 500;
   font-size: 1.3rem; }

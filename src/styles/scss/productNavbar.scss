@@ -5,6 +5,15 @@
 	padding: 10px 0;
 	display: block;
 }
+.menu-bar {
+	&:hover {
+		background-color: #d00256;
+	}
+	&:active {
+		background-color: #d00256;
+	}
+	background-color: #d00256;
+}
 .nav-logo {
 	font-weight: 500;
 	font-size: 1.3rem;
