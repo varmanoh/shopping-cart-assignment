@@ -3,18 +3,18 @@
 
     let productCategories = document.getElementById('product-category-cards');
 
-    const anchorTagPage = href => {
-        switch (href) {
+    const anchorTagPage = category => {
+        switch (category) {
             case 'beverages':
-                return '../productsPage/beveragePage/beverage.html';
+                return '/beveragePage/beverage.html';
             case 'bakery-cakes-dairy':
-                return '../productsPage/bakeryPage/bakery.html'
+                return '/bakeryPage/bakery.html'
             case 'beauty-hygiene':
-                return '../productsPage/beautyPage/beauty.html'
+                return '/beautyPage/beauty.html'
             case 'baby':
-                return '../productsPage/babyPage/baby.html'
+                return '/babyPage/baby.html'
             case 'fruit-and-veg':
-                return '../productsPage/fruitsPage/fruits.html'
+                return '/fruitsPage/fruits.html'
         }
     }
 
@@ -24,7 +24,7 @@
             <div class="category-text">
                 <strong class="category-heading">${categoryBanner.name}</strong>
                 <p>${categoryBanner.description}</p>
-                <a href="${anchorTagPage(categoryBanner.key)}" class="app-btn btn-category">Explore ${categoryBanner.key}</a>
+                <a href="../productsPage${anchorTagPage(categoryBanner.key)}" class="app-btn btn-category">Explore ${categoryBanner.key}</a>
             </div>
         </div>
     `;
