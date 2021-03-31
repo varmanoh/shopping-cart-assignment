@@ -16,7 +16,13 @@ function loadCart() {
     modalBackground.style.display = 'block';
    
     miniCartSection.style.display = 'block';
-    miniCart.innerHTML = '<object style="width:100%;height:100%" type="text/html" data="../../cartPage/miniCart.html" ></object>';
+    
+    if (window.location.href == `http://127.0.0.1:8080/src/homePage/home.html`) {
+        miniCart.innerHTML = '<object style="width:100%;height:100%" type="text/html" data="../cartPage/miniCart.html" ></object>';
+    }
+    else {
+        miniCart.innerHTML = '<object style="width:100%;height:100%" type="text/html" data="../../cartPage/miniCart.html" ></object>';
+    }
 }
 
 function close() {
