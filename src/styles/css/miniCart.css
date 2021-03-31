@@ -1,20 +1,10 @@
-.mini-cart {
+.mini-cart-body {
   background-color: #eee;
-  margin: 80px 0 110px; }
-  .mini-cart:hover {
+  margin: 10px 0 110px; }
+  .mini-cart-body:hover {
     overflow-y: scroll; }
-  .mini-cart::-webkit-scrollbar {
+  .mini-cart-body::-webkit-scrollbar {
     display: none; }
-
-.mini-cart-nav {
-  background-color: #000;
-  position: fixed;
-  width: 100%;
-  color: #fff;
-  padding: 20px;
-  top: 0; }
-  .mini-cart-nav a {
-    color: #fff; }
 
 .items {
   display: flex;
@@ -75,10 +65,3 @@
   font-size: 1rem;
   display: flex;
   justify-content: space-between; }
-
-h1.nav-logo-cart {
-  font-size: 1.1rem; }
-
-.nav-logo-cart span {
-  font-size: 0.8rem;
-  font-weight: 500; }
