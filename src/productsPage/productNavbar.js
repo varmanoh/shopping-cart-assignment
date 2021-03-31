@@ -12,3 +12,10 @@ function openCloseMenu() {
         iClass.className = "fal fa-times fa-2x";
     }
 }
+
+// let miniCart = document.getElementById('mini-cart');
+
+function close() {
+    miniCart.style.display = 'none';
+    modalBackground.style.display = 'none';
+}

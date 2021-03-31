@@ -1,11 +1,22 @@
-body {
-  background-color: #dedede; }
+.cart {
+  background-color: #dedede;
+  margin: 80px 0 110px; }
+  .cart:hover {
+    overflow-y: scroll; }
+  .cart::-webkit-scrollbar {
+    display: none; }
 
 .main-nav-mob {
   display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: #ffff; }
 
 .main-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: none;
   background-color: #ffff; }
 
@@ -88,6 +99,8 @@ body {
   justify-content: space-between; }
 
 @media (min-width: 480px) {
+  .cart {
+    margin: 110px 0; }
   .main-nav-mob {
     display: none; }
   .main-nav {

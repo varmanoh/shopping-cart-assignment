@@ -1,19 +1,19 @@
-.empty-cart {
+.mini-cart {
   background-color: #eee;
-  margin: 100px 0; }
-  .empty-cart:hover {
+  margin: 80px 0 110px; }
+  .mini-cart:hover {
     overflow-y: scroll; }
-  .empty-cart::-webkit-scrollbar {
+  .mini-cart::-webkit-scrollbar {
     display: none; }
 
-.empty-cart-nav {
+.mini-cart-nav {
   background-color: #000;
   position: fixed;
   width: 100%;
   color: #fff;
   padding: 20px;
   top: 0; }
-  .empty-cart-nav a {
+  .mini-cart-nav a {
     color: #fff; }
 
 .items {

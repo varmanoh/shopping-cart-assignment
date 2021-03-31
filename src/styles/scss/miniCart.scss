@@ -1,6 +1,6 @@
-.empty-cart {
+.mini-cart {
 	background-color: #eee;
-	margin: 100px 0;
+	margin: 80px 0 110px;
 	&:hover {
 		overflow-y: scroll;
 	}
@@ -8,7 +8,7 @@
 		display: none;
 	}
 }
-.empty-cart-nav {
+.mini-cart-nav {
 	background-color: #000;
 	position: fixed;
 	width: 100%;
