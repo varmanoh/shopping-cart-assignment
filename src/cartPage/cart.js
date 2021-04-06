@@ -1,6 +1,8 @@
 export let cart = async (x = '', y = '') => {
 
     let cartSpan = document.querySelectorAll('.cart-items');
+    let cartsButton = document.querySelectorAll('button.buy-btn');
+    let cartsButtonTablet = document.querySelectorAll('button.buy-btn-tablet');
     let cartsButtonDesktop = document.querySelectorAll('button.buy-btn-desktop');
 
     let products = await fetch('../../../server/products/index.get.json')
@@ -9,6 +11,20 @@ export let cart = async (x = '', y = '') => {
 
     for (let index = 0; index < cartsButtonDesktop.length; index++) {
         cartsButtonDesktop[index].onclick = function () {
+            cartNumbers(products[index]);
+            totalCost(products[index]);
+        };
+    }
+
+    for (let index = 0; index < cartsButtonTablet.length; index++) {
+        cartsButtonTablet[index].onclick = function () {
+            cartNumbers(products[index]);
+            totalCost(products[index]);
+        };
+    }
+
+    for (let index = 0; index < cartsButton.length; index++) {
+        cartsButton[index].onclick = function () {
             cartNumbers(products[index]);
             totalCost(products[index]);
         };
@@ -85,6 +101,7 @@ export let cart = async (x = '', y = '') => {
         let cartItems = localStorage.getItem('productsInCart');
         cartItems = JSON.parse(cartItems);
         let cartCost = localStorage.getItem('totalCost');
+
         let itemContainer = document.getElementById('items-section');
         let offerDetail = document.getElementById('offer-detail');
         let checkoutSection = document.querySelector('.checkout-section');
@@ -92,12 +109,14 @@ export let cart = async (x = '', y = '') => {
 
         if (offerDetail && checkoutSection) {
             offerDetail.style.display = 'none';
+            checkoutSection.style.display = 'none';
         }
 
         if (cartItems && itemContainer) {
             itemContainer.innerHTML = '';
             emptyCartDiv.style.display = 'none';
             offerDetail.style.display = 'flex';
+            checkoutSection.style.display = 'block';
             checkoutSection.innerHTML = `
                 <p>Promo code can be applied on payment page</p>
                 <a class="app-btn checkout-btn">
@@ -105,6 +124,7 @@ export let cart = async (x = '', y = '') => {
                     <span>Rs.${cartCost}</span>
                 </a>
             `;
+
             Object.values(cartItems).map(item => {
                 itemContainer.innerHTML += `
                     <div class="items">
@@ -117,9 +137,9 @@ export let cart = async (x = '', y = '') => {
     
                             <div class="item-details">
                                 <div class="item-quantity">
-                                    <button class="app-btn cart-btn">-</button>
+                                    <button class="app-btn cart-btn sub">-</button>
                                         <span class="item-qnty">${item.inCart}</span> 
-                                    <button class="app-btn cart-btn">+</button>
+                                    <button class="app-btn cart-btn add">+</button>
                                     <span class="item-qnty">X</span> Rs.${item.price}
                                 </div>
     

@@ -39,7 +39,7 @@
                         <div>
                             <img src="../../../static/images/cart.svg" class="cart-logo d-inline-block" alt="cart-logo">
                         </div>
-                        <span class="cart-items d-inline-block">1 Item</span>
+                        <span class="cart-items d-inline-block">0 Items</span>
                     </a>
                 </div>
             </section>
@@ -57,7 +57,7 @@
                 <div>
                     <img src="../../../static/images/cart.svg" class="cart-logo d-inline-block" alt="cart-logo">
                 </div>
-                <span class="cart-items d-inline-block">1 Item</span>
+                <span class="cart-items d-inline-block">0 Items</span>
             </a>
         </section>    
     </nav>
@@ -65,48 +65,26 @@
     <!-- End of Navbar -->
 
     <header class="cart-header">
-        <h1>My Cart <span>(1 item)</span></h1>
+        <h1>My Cart <span>(<span class="cart-items">0 items</span>)</span></h1>
     </header>
 
-    <section class="items-section">
-        <div class="items">
-            <img src="../../../static/images/products/fruit-n-veg/apple.jpg" alt="kiwi-green" class="item-img">
-            
-            <div class="item-contents">
-                <div class="items-heading">
-                    <h2>Apple - Washington, Regular, 4 pcs</h2>
-                </div>
-
-                <div class="item-details">
-                    <div class="item-quantity">
-                        <button class="app-btn cart-btn">&mdash;</button>
-                            <span class="item-qnty"> 1 </span> 
-                        <button class="app-btn cart-btn">+</button>
-                        <span class="item-qnty">X</span> Rs.187
-                    </div>
-
-                    <div class="item-rate">
-                        <span class="rate">Rs.187</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section id="items-section" class="items-section">
+        <section class="message-section">
+            <h2>No items in your cart</h2>
+            <p>Your favourite items are just a click away</p>
+        </section>
     </section>
 
-    <section class="offer-detail d-flex flex-start align-items-center">
+    <section id="offer-detail" class="offer-detail d-flex flex-start align-items-center">
         <img src="../../static/images/lowest-price.png" alt="lowest-price-img" height="40px" width="auto">
         <p>You won't find it cheaper anywhere</p>
     </section>
     
     <section class="checkout-section">
-        <p>
-            Promo code can be applied on payment page
-        </p>
-        <a class="app-btn checkout-btn">
-            <span>Proceed to Checkout</span>
-            <span>Rs.187</span>
-        </a>
     </section>
+    
+    <a href="../productsPage/fruitsPage/fruits.html" class="app-btn checkout-btn-empty">Start Shopping</a>
 
+<script src="./cartDisplay.js" type="module"></script>
 </body>
 </html>

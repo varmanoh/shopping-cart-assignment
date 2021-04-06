@@ -3,11 +3,8 @@ let miniCartSection = document.getElementById('mini-cart-section')
 let modalBackground = document.getElementById('modal-background');
 let closeBtn = document.querySelector('a.close-btn');
 
-if(modalBackground) {
+if (modalBackground && closeBtn) {
     modalBackground.onclick = () => close();
-}
-
-if(closeBtn) {
     closeBtn.onclick = () => close();
 }
 

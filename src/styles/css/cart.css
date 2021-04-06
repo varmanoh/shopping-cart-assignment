@@ -40,7 +40,7 @@
 
 .items {
   display: flex;
-  box-shadow: 0px 6px 4px #d2d2d2, 0px -6px 4px #d2d2d2;
+  border-radius: 4px;
   background-color: #fff;
   margin-bottom: 20px;
   padding: 5px; }
@@ -77,6 +77,7 @@
 .offer-detail {
   margin: 10px;
   padding: 10px;
+  border-radius: 4px;
   background-color: #fff; }
   .offer-detail > * {
     margin-left: 10px; }
@@ -97,6 +98,22 @@
   font-size: 1rem;
   display: flex;
   justify-content: space-between; }
+
+.checkout-btn-empty {
+  width: 96%;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1rem; }
+
+.message-section {
+  text-align: center;
+  margin-top: 120px; }
+  .message-section h2 {
+    font-size: 1.1rem; }
 
 @media (min-width: 480px) {
   .cart {
