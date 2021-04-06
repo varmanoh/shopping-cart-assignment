@@ -1,3 +1,5 @@
+import { cart } from '../cartPage/cart.js';
+
 (async function () {
     //--------------- fetching products category --------------//
 
@@ -93,6 +95,8 @@
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
     }
+
+    cart();
 
 })();
 

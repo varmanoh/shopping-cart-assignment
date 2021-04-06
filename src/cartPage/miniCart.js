@@ -4,11 +4,11 @@ let modalBackground = document.getElementById('modal-background');
 let closeBtn = document.querySelector('a.close-btn');
 
 if(modalBackground) {
-    modalBackground.addEventListener('click', close);
+    modalBackground.onclick = () => close();
 }
 
 if(closeBtn) {
-    closeBtn.addEventListener('click', close);
+    closeBtn.onclick = () => close();
 }
 
 function loadCart() {

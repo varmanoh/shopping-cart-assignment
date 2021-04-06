@@ -1,8 +1,9 @@
-import {cardDetails} from '../cardDetails.js';
+import { cardDetails } from '../cardDetails.js';
+import { cart } from '../../cartPage/cart.js';
 
 (async function () {
 
-    let productCards = document.getElementById('products');    
+    let productCards = document.getElementById('products');
 
     await fetch('../../../server/products/index.get.json')
         .then(response => response.json())
@@ -11,5 +12,7 @@ import {cardDetails} from '../cardDetails.js';
                 ${cardData.slice(0, 5).map(cardDetails).join("")}
             `;
         });
+
+    cart(0, 5);
 
 })();

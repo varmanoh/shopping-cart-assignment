@@ -1,4 +1,5 @@
-import {cardDetails} from '../cardDetails.js';
+import { cardDetails } from '../cardDetails.js';
+import { cart } from '../../cartPage/cart.js';
 
 (async function () {
 
@@ -11,5 +12,7 @@ import {cardDetails} from '../cardDetails.js';
                 ${cardData.slice(5, 9).map(cardDetails).join("")}
             `;
         });
+
+    cart(5, 9);
 
 })();
