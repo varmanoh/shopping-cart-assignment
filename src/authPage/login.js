@@ -16,5 +16,7 @@
         input.addEventListener('focusin', toggleClass);
         input.addEventListener('focusout', toggleClass);
     }
+
+    localStorage.clear()
 })();
 
