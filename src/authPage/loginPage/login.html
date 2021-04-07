@@ -64,7 +64,7 @@
             <p class="margin-y-t-3">Get access to your Orders, Wishlist and Recommendations</p>
         </section>
         <main class="login-form">
-            <form action="../../homePage/home.html">       
+            <form onsubmit="event.preventDefault();">       
                 <div class="form-element">
                     <label for="email" class="control-label">Email</label>
                     <input type="email" name="email" id="email" placeholder="Email"> 
@@ -76,7 +76,7 @@
                 </div>
 
                 <div class="form-element">
-                    <button type="submit" class="app-btn submit-btn">Login</button>
+                    <button onclick="window.location.href=`../../homePage/home.html`" class="app-btn submit-btn">Login</button>
                 </div>
 
             </form>
