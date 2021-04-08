@@ -151,6 +151,47 @@ export let cart = async (x = '', y = '') => {
                     </div>
                 `
             });
+
+            let subtractBtn = document.querySelectorAll('button.cart-btn.sub');
+            for (let index = 0; index < subtractBtn.length; index++) {
+                subtractBtn[index].onclick = function () {
+
+                    //------------------- kinda works -------------------//
+                    let cartObj = Object.values(cartItems)[index];
+                    cartObj.inCart -= 1;
+
+                    if (cartObj.inCart <= 0) {
+                        localStorage.removeItem(cartObj);
+                    }
+                    localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+
+                    let cartCost = localStorage.getItem('totalCost');
+                    if (cartCost != null) {
+                        cartCost = parseInt(cartCost);
+                        localStorage.setItem('totalCost', cartCost - cartObj.price);
+                    }
+                    displayCart();
+                    // console.log(cartObj);
+                };
+            }
+
+            let addBtn = document.querySelectorAll('button.cart-btn.add');
+
+            for (let index = 0; index < addBtn.length; index++) {
+                addBtn[index].onclick = function () {
+                    //------------------- kinda works -------------------//
+                    let cartObj = Object.values(cartItems)[index];
+                    cartObj.inCart += 1;
+
+                    localStorage.setItem('productsInCart', JSON.stringify(cartItems))
+
+                    totalCost(cartObj);
+                    // cartNumbers(cartObj);
+                    displayCart();
+                    // console.log(cartObj);
+                };
+            }
+
         }
     }
 
