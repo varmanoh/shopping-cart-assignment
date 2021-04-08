@@ -21,14 +21,14 @@ import { cart } from '../cartPage/cart.js';
     }
 
     const filteredData = (categoryBanner) => `
-        <div class="category-cards">
+        <article class="category-cards">
             <img src="../..${categoryBanner.imageUrl}" alt="${categoryBanner.name}" class="category-img">
             <div class="category-text">
-                <strong class="category-heading">${categoryBanner.name}</strong>
+                <h2 class="category-heading">${categoryBanner.name}</h2>
                 <p>${categoryBanner.description}</p>
                 <a href="../productsPage${anchorTagPage(categoryBanner.key)}" class="app-btn btn-category">Explore ${categoryBanner.key}</a>
             </div>
-        </div>
+        </article>
     `;
 
     const categoryCard = (categoryBanner) =>
@@ -68,12 +68,33 @@ import { cart } from '../cartPage/cart.js';
 
     showSlides(slideIndex);
 
-    document.querySelector('.prev').addEventListener('click', () => plusSlides(-1));
-    document.querySelector('.next').addEventListener('click', () => plusSlides(1));
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+
+    prevButton.addEventListener('keydown', event => {
+        if (event.key == 'Enter') {
+            plusSlides(-1);
+        }
+    });
+
+    nextButton.addEventListener('keydown', event => {
+        if (event.key == 'Enter') {
+            plusSlides(1);
+        }
+    });
+
+    prevButton.addEventListener('click', () => plusSlides(-1));
+    nextButton.addEventListener('click', () => plusSlides(1));
 
     function plusSlides(slideChange) {
         showSlides(slideIndex = parseInt(slideIndex) + parseInt(slideChange));
     }
+
+    dots.forEach(el => el.addEventListener('keydown', event => {
+        if (event.key == 'Enter') {
+            currentSlide(event.target.getAttribute("data-el"));
+        }
+    }));
 
     dots.forEach(el => el.addEventListener('click', event => currentSlide(event.target.getAttribute("data-el"))));
 
