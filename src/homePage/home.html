@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Home page of Sabka Bazaar where user can go through offers on product and also product categories">
-    
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <meta name="description"
+        content="Home page of Sabka Bazaar where user can go through offers on product and also product categories">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="../styles/css/external/reset.css">
     <link rel="stylesheet" href="../styles/css/external/util.css">
     <link rel="stylesheet" href="../styles/css/navbar.css">
@@ -14,57 +17,64 @@
 
     <title>Home | SABKA BAZAAR</title>
 </head>
-<body>
-    <nav class="main-nav">
-        <section class="container d-flex space-between">
-            <img src="../../../static/images/logo.png" class="main-logo" alt="sabka-bazaar-logo">
-            
-            <section class="nav-links-section d-flex-column">
-                <div class="nav-auth">
-                    <ul>
-                        <li class="d-inline-block"><a href="../authPage/loginPage/login.html">SignIn</a></li>
-                        <li class="d-inline-block"><a href="../authPage/registerPage/register.html">Register</a></li>
-                    </ul>
-                </div>
-                <div class="nav-pages d-flex space-between align-items-center">
-                    <div class="main-pages-nav">
+
+<body class="home-page">
+    <header>
+        <nav class="main-nav">
+            <section class="container d-flex space-between">
+                <img src="../../../static/images/logo.png" class="main-logo" alt="sabka-bazaar-logo">
+
+                <section class="nav-links-section d-flex-column">
+                    <div class="nav-auth">
                         <ul>
-                            <li class="d-inline-block"><a href="../homePage/home.html">Home</a></li>
-                            <li class="d-inline-block"><a href="../productsPage/fruitsPage/fruits.html">Products</a></li>
+                            <li class="d-inline-block"><a href="../authPage/loginPage/login.html">SignIn</a></li>
+                            <li class="d-inline-block"><a href="../authPage/registerPage/register.html">Register</a>
+                            </li>
                         </ul>
                     </div>
-                    <a class="cart-nav cart-nav-tablet" href="../cartPage/cart.html">
-                        <div>
-                            <img src="../../../static/images/cart.svg" class="cart-logo d-inline-block" alt="cart-logo">
+                    <div class="nav-pages d-flex space-between align-items-center">
+                        <div class="main-pages-nav">
+                            <ul>
+                                <li class="d-inline-block"><a href="../homePage/home.html">Home</a></li>
+                                <li class="d-inline-block"><a
+                                        href="../productsPage/allProductsPage/allProducts.html">Products</a></li>
+                            </ul>
                         </div>
-                        <span class="cart-items d-inline-block">0 Items</span>
-                    </a>
-                    <div class="cart-nav cart-nav-desktop" onclick="loadCart()">
-                        <div>
-                            <img src="../../../static/images/cart.svg" class="cart-logo d-inline-block" alt="cart-logo">
+                        <a class="cart-nav cart-nav-tablet" href="../cartPage/cart.html">
+                            <div>
+                                <img src="../../../static/images/cart.svg" class="cart-logo d-inline-block"
+                                    alt="cart-logo">
+                            </div>
+                            <span class="cart-items d-inline-block">0 Items</span>
+                        </a>
+                        <div tabindex="0" class="cart-nav cart-nav-desktop" onclick="loadCart()">
+                            <div>
+                                <img src="../../../static/images/cart.svg" class="cart-logo d-inline-block"
+                                    alt="cart-logo">
+                            </div>
+                            <span class="cart-items d-inline-block">0 Items</span>
                         </div>
-                        <span class="cart-items d-inline-block">0 Items</span>
                     </div>
-                </div>
+                </section>
             </section>
-        </section>    
-    </nav>
+        </nav>
 
-    <!-- main nav mobile -->
-    <nav class="main-nav-mob">
-        <section class="d-flex space-between">
-            <a href="../homePage/home.html">
-                <img src="../../../static/images/logo.png" class="main-logo" alt="sabka-bazaar-logo">
-            </a>
+        <!-- main nav mobile -->
+        <nav class="main-nav-mob">
+            <section class="d-flex space-between">
+                <a href="../homePage/home.html">
+                    <img src="../../../static/images/logo.png" class="main-logo" alt="sabka-bazaar-logo">
+                </a>
 
-            <a href="../cartPage/cart.html" class="cart-nav cart-mob">
-                <div>
-                    <img src="../../../static/images/cart.svg" class="cart-logo d-inline-block" alt="cart-logo">
-                </div>
-                <span class="cart-items d-inline-block">0 Items</span>
-            </a>
-        </section>    
-    </nav>
+                <a href="../cartPage/cart.html" class="cart-nav cart-mob">
+                    <div>
+                        <img src="../../../static/images/cart.svg" class="cart-logo d-inline-block" alt="cart-logo">
+                    </div>
+                    <span class="cart-items d-inline-block">0 Items</span>
+                </a>
+            </section>
+        </nav>
+    </header>
 
     <!-- End of Navbar -->
 
@@ -75,20 +85,20 @@
                 <div id="banners">
                     <!-- Images are fetched from server -->
                 </div>
-                                
-                <a class="prev" tabindex="0">Prev</a>
-                <a class="next" tabindex="0">Next</a>     
-                
+
+                <a class="prev" tabindex="0">PREV</a>
+                <a class="next" tabindex="0">NEXT</a>
+
                 <div class="slides-nav">
-                  <span class="dot" data-el="1" tabindex="0"></span> 
-                  <span class="dot" data-el="2" tabindex="0"></span> 
-                  <span class="dot" data-el="3" tabindex="0"></span> 
-                  <span class="dot" data-el="4" tabindex="0"></span> 
-                  <span class="dot" data-el="5" tabindex="0"></span> 
+                    <span class="dot" data-el="1" tabindex="0"></span>
+                    <span class="dot" data-el="2" tabindex="0"></span>
+                    <span class="dot" data-el="3" tabindex="0"></span>
+                    <span class="dot" data-el="4" tabindex="0"></span>
+                    <span class="dot" data-el="5" tabindex="0"></span>
                 </div>
 
             </div>
-            
+
             <div id="product-category-cards">
                 <!-- Fetched from server -->
             </div>
@@ -106,13 +116,13 @@
             <div class="d-flex space-between align-items-center ">
                 <h1 class="nav-logo-cart">My Cart <span>(<span class="cart-items">0 items</span>)</span></h1>
                 <a class="close-btn"><i class="fal fa-times fa-2x"></i></a>
-            </div>     
+            </div>
         </nav>
         <div id="mini-cart" class="mini-cart">
-            
-        </div> 
+
+        </div>
     </div>
-    
+
     <div id="modal-background" class="modal-background">
 
     </div>
@@ -120,4 +130,5 @@
     <script src="home.js" type="module"></script>
     <script src="../cartPage/miniCart.js"></script>
 </body>
+
 </html>

@@ -33,10 +33,12 @@
 
 .desktop-nav-list li {
   font-size: 0.9rem;
-  padding: 10px 20px;
-  margin-top: 10px; }
+  margin: 10px 0; }
 
 .desktop-nav-list a {
+  display: block;
+  margin-right: 5px;
+  padding: 10px;
   color: #666666; }
 
 @media (min-width: 480px) {
