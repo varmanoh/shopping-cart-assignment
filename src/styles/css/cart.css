@@ -1,10 +1,15 @@
 .cart {
   background-color: #dedede;
-  margin: 80px 0 110px; }
+  margin: 70px 0 110px; }
   .cart:hover {
     overflow-y: scroll; }
   .cart::-webkit-scrollbar {
     display: none; }
+
+.cart-dropdown {
+  position: fixed; }
+  .cart-dropdown li a {
+    padding-right: 10px; }
 
 .main-nav-mob {
   display: block;

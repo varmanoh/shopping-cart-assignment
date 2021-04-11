@@ -12,3 +12,13 @@ function openCloseMenu() {
         iClass.className = "fal fa-times fa-2x";
     }
 }
+
+function hamburgerToggle() {
+    let hamburgerMenu = document.querySelector('.mob-nav-dropdown');
+    
+    if (hamburgerMenu.style.display === "block") {
+        hamburgerMenu.style.display = "none";
+    } else {
+        hamburgerMenu.style.display = "block";
+    }
+}
