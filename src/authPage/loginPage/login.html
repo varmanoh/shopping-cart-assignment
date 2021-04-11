@@ -64,21 +64,19 @@
             <p class="margin-y-t-3">Get access to your Orders, Wishlist and Recommendations</p>
         </section>
         <main class="login-form">
-            <form action="../../homePage/home.html">       
+            <form onsubmit="event.preventDefault();">       
                 <div class="form-element">
-                    <label for="email" class="control-label">Email
-                        <input type="email" name="email" id="email" > 
-                        <!-- placeholder="Email" -->
-                    </label>
+                    <label for="email" class="control-label">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Email"> 
                 </div>
+
                 <div class="form-element">
-                    <label for="password" class="control-label">Password
-                        <input type="password" name="password" id="password" >
-                        <!-- placeholder="Password" -->
-                    </label>
+                    <label for="password" class="control-label">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Password">
                 </div>
+
                 <div class="form-element">
-                    <button type="submit" class="app-btn submit-btn">Login</button>
+                    <button onclick="window.location.href=`../../homePage/home.html`" class="app-btn submit-btn">Login</button>
                 </div>
 
             </form>
@@ -91,5 +89,7 @@
             Copyright © 2011-2018 Sabka Bazaar Grocery Supplies Pvt Ltd
         </div>
     </footer>
+
+    <script src="../login.js"></script>
 </body>
 </html>

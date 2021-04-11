@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Home page of Sabka Bazaar where user can go through offers on product and also product categories">
-    
+    <meta name="description"
+        content="Home page of Sabka Bazaar where user can go through offers on product and also product categories">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="../styles/css/external/reset.css">
     <link rel="stylesheet" href="../styles/css/external/util.css">
     <link rel="stylesheet" href="../styles/css/navbar.css">
@@ -13,51 +17,83 @@
 
     <title>Home | SABKA BAZAAR</title>
 </head>
-<body>
-    <nav class="main-nav">
-        <section class="container d-flex space-between">
-            <img src="../../../static/images/logo.png" class="main-logo" alt="sabka-bazaar-logo">
-            
-            <section class="nav-links-section d-flex-column">
-                <div class="nav-auth">
-                    <ul>
-                        <li class="d-inline-block"><a href="../authPage/loginPage/login.html">SignIn</a></li>
-                        <li class="d-inline-block"><a href="../authPage/registerPage/register.html">Register</a></li>
-                    </ul>
-                </div>
-                <div class="nav-pages d-flex space-between align-items-center">
-                    <div class="main-pages-nav">
+
+<body class="home-page">
+    <header>
+        <nav class="main-nav">
+            <section class="container d-flex space-between">
+                <img src="../../../static/images/logo.png" class="main-logo" alt="sabka-bazaar-logo">
+
+                <section class="nav-links-section d-flex-column">
+                    <div class="nav-auth">
                         <ul>
-                            <li class="d-inline-block"><a href="../homePage/home.html">Home</a></li>
-                            <li class="d-inline-block"><a href="../productsPage/fruitsPage/fruits.html">Products</a></li>
+                            <li class="d-inline-block"><a href="../authPage/loginPage/login.html">SignIn</a></li>
+                            <li class="d-inline-block"><a href="../authPage/registerPage/register.html">Register</a>
+                            </li>
                         </ul>
                     </div>
-                    <a class="cart-nav" href="../cartPage/cart.html">
-                        <div>
-                            <img src="../../../static/images/cart.svg" class="cart-logo d-inline-block" alt="cart-logo">
+                    <div class="nav-pages d-flex space-between align-items-center">
+                        <div class="main-pages-nav">
+                            <ul>
+                                <li class="d-inline-block"><a href="../homePage/home.html">Home</a></li>
+                                <li class="d-inline-block"><a
+                                        href="../productsPage/allProductsPage/allProducts.html">Products</a></li>
+                            </ul>
                         </div>
-                        <span class="cart-items d-inline-block">0 Items</span>
+                        <a class="cart-nav cart-nav-tablet" href="../cartPage/cart.html">
+                            <div>
+                                <img src="../../../static/images/cart.svg" class="cart-logo d-inline-block"
+                                    alt="cart-logo">
+                            </div>
+                            <span class="cart-items d-inline-block">0 Items</span>
+                        </a>
+                        <div tabindex="0" class="cart-nav cart-nav-desktop" onclick="loadCart()">
+                            <div>
+                                <img src="../../../static/images/cart.svg" class="cart-logo d-inline-block"
+                                    alt="cart-logo">
+                            </div>
+                            <span class="cart-items d-inline-block">0 Items</span>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </nav>
+
+        <!-- main nav mobile -->
+        <nav class="main-nav-mob">
+            <section class="d-flex space-between">
+                <a href="../homePage/home.html">
+                    <img src="../../../static/images/logo.png" class="main-logo" alt="sabka-bazaar-logo">
+                </a>
+
+                <div class="hamburger-menu d-flex align-items-center">
+                    <a onclick="hamburgerToggle()">
+                        <i class="fa fa-bars fa-2x"></i>
                     </a>
                 </div>
+
+                <a href="../cartPage/cart.html" class="cart-nav cart-mob">
+                    <div>
+                        <img src="../../../static/images/cart.svg" class="cart-logo d-inline-block" alt="cart-logo">
+                    </div>
+                    <span class="cart-items d-inline-block">0 Items</span>
+                </a>
             </section>
-        </section>    
-    </nav>
-
-    <!-- main nav mobile -->
-    <nav class="main-nav-mob">
-        <section class="d-flex space-between">
-            <a href="../homePage/home.html">
-                <img src="../../../static/images/logo.png" class="main-logo" alt="sabka-bazaar-logo">
-            </a>
-
-            <a href="../cartPage/cart.html" class="cart-nav cart-mob">
-                <div>
-                    <img src="../../../static/images/cart.svg" class="cart-logo d-inline-block" alt="cart-logo">
-                </div>
-                <span class="cart-items d-inline-block">0 Item</span>
-            </a>
-        </section>    
-    </nav>
+        </nav>
+        <div class="mob-nav-dropdown text-align-center">
+            <ul class="hambuger-list">
+                <li>
+                    <a href="./home.html">Home</a>
+                </li>
+                <li>
+                    <a href="../productsPage/allProductsPage/allProducts.html">Products</a>
+                </li>
+                <li>
+                    <a href="../authPage/loginPage/login.html">SignOut</a>
+                </li>
+            </ul>
+        </div>
+    </header>
 
     <!-- End of Navbar -->
 
@@ -65,86 +101,27 @@
         <section class="container">
 
             <div class="slideshow-container">
+                <div id="banners">
+                    <!-- Images are fetched from server -->
+                </div>
 
-                <div class="mySlides fade">
-                  <img src="../../static/images/offers/offer1.jpg" class="carousel-img">
-                </div>
-                
-                <div class="mySlides fade">
-                  <img src="../../static/images/offers/offer2.jpg" class="carousel-img">
-                </div>
-                
-                <div class="mySlides fade">
-                  <img src="../../static/images/offers/offer3.jpg" class="carousel-img">
-                </div>
-                
-                <div class="mySlides fade">
-                  <img src="../../static/images/offers/offer4.jpg" class="carousel-img">
-                </div>
-                
-                <div class="mySlides fade">
-                  <img src="../../static/images/offers/offer5.jpg" class="carousel-img">
-                </div>
-                
-                <a class="prev" onclick="plusSlides(-1)">Prev</a>
-                <a class="next" onclick="plusSlides(1)">Next</a>     
-                
+                <a class="prev" tabindex="0">PREV</a>
+                <a class="next" tabindex="0">NEXT</a>
+
                 <div class="slides-nav">
-                  <span class="dot" onclick="currentSlide(1)"></span> 
-                  <span class="dot" onclick="currentSlide(2)"></span> 
-                  <span class="dot" onclick="currentSlide(3)"></span> 
-                  <span class="dot" onclick="currentSlide(4)"></span> 
-                  <span class="dot" onclick="currentSlide(5)"></span> 
+                    <span class="dot" data-el="1" tabindex="0"></span>
+                    <span class="dot" data-el="2" tabindex="0"></span>
+                    <span class="dot" data-el="3" tabindex="0"></span>
+                    <span class="dot" data-el="4" tabindex="0"></span>
+                    <span class="dot" data-el="5" tabindex="0"></span>
                 </div>
 
             </div>
 
-            <div class="category-cards">
-                <img src="../../static/images/category/fruits.png" alt="fruits-and-vegetables" class="category-img">
-                <div class="category-text">
-                    <strong class="category-heading">Fruits and Vegetables</strong>
-                    <p>A variety of fresh fruits and vegetables.</p>
-                    <a href="../productsPage/fruitsPage/fruits.html" class="app-btn btn-category">Explore fruit-and-veg</a>
-                </div>
+            <div id="product-category-cards">
+                <!-- Fetched from server -->
             </div>
-            <div class="category-cards">
-                <div class="category-text">
-                    <strong class="category-heading">Bakery Cakes and Dairy</strong>
-                    <p>
-                        Best cupcakes, cookies, cakes, pies, cheesecakes, fresh bread,
-                        biscotti, muffins, bagels, fresh coffee, milk and more.
-                    </p>
-                    <a href="../productsPage/bakeryPage/bakery.html" class="app-btn btn-category">Explore bakery-cakes-dairy</a>
-                </div>
-                <img src="../../static/images/category/bakery.png" alt="bakery" class="category-img">
-            </div>
-            <div class="category-cards">
-                <img src="../../static/images/category/beverages.png" alt="beverages" class="category-img">
-                <div class="category-text">
-                    <strong class="category-heading">Beverages</strong>
-                    <p>
-                        Our beverage department will ensure your fridge is always fully stocked. 
-                        Shop for soda, juice, beer and more.
-                    </p>
-                    <a href="../productsPage/beveragePage/beverage.html" class="app-btn btn-category">Explore beverages</a>
-                </div>
-            </div>
-            <div class="category-cards">
-                <div class="category-text">
-                    <strong class="category-heading">Beauty and Hygiene</strong>
-                    <p>Buy beauty and personal care products online in India at best prices.</p>
-                    <a href="../productsPage/beautyPage/beauty.html" class="app-btn btn-category">Explore beauty-hygiene</a>
-                </div>
-                <img src="../../static/images/category/beauty.png" alt="beauty-products" class="category-img">
-            </div>
-            <div class="category-cards">
-                <img src="../../static/images/category/baby.png" alt="baby" class="category-img">
-                <div class="category-text">
-                    <strong class="category-heading">Baby Care</strong>
-                    <p>Shop online for Baby Products, Diapers, Skin Care Products, etc.</p>
-                    <a href="../productsPage/babyPage/baby.html" class="app-btn btn-category">Explore baby</a>
-                </div>
-            </div>
+
         </section>
     </main>
     <footer>
@@ -152,6 +129,26 @@
             Copyright © 2011-2018 Sabka Bazaar Grocery Supplies Pvt Ltd
         </div>
     </footer>
-    <script src="home.js" ></script>
+
+    <div id="mini-cart-section" class="mini-cart-section">
+        <nav class="mini-cart-nav">
+            <div class="d-flex space-between align-items-center ">
+                <h1 class="nav-logo-cart">My Cart <span>(<span class="cart-items">0 items</span>)</span></h1>
+                <a class="close-btn"><i class="fal fa-times fa-2x"></i></a>
+            </div>
+        </nav>
+        <div id="mini-cart" class="mini-cart">
+
+        </div>
+    </div>
+
+    <div id="modal-background" class="modal-background">
+
+    </div>
+
+    <script src="home.js" type="module"></script>
+    <script src="../productsPage/productNavbar.js"></script>
+    <script src="../cartPage/miniCart.js"></script>
 </body>
+
 </html>

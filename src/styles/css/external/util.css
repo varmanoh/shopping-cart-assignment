@@ -156,6 +156,10 @@ footer {
     border: none;
     cursor: pointer;
 }
+.app-btn:hover,
+.app-btn:focus {
+    background-color: #ff0066;
+}
 
 .focusable:active,
 .focusable:focus {
@@ -175,7 +179,7 @@ footer {
 
 @media (min-width: 1100px) {
     .container{
-        width:96%;
+        width:85%;
         margin:auto;
         padding: 2px 10px 0 10px;
     }

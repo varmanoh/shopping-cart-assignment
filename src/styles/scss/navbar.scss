@@ -37,11 +37,43 @@ a {
 	align-items: center;
 	display: flex;
 	padding: 10px;
-	width: 36%;
+	width: 30%;
 	cursor: pointer;
 	background-color: #d2d2d2;
 }
+.hamburger-menu {
+	.fa-bars {
+		color: #d00256;
+		padding: 15px;
+	}
+}
+.mob-nav-dropdown {
+	display: none;
+	position: absolute;
+	z-index: 100;
+	background-color: #d00256;
+	width: 100%;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding: 10px;
+}
+.hambuger-list {
+	li {
+		a {
+			color: #fff;
+			display: block;
+			padding: 10px;
+			padding-right: 30px;
+			font-size: 1.1rem;
+			font-weight: 500;
+			cursor: pointer;
+		}
+	}
+}
 @media (min-width: 480px) {
+	.mob-nav-dropdown {
+		display: none;
+	}
 	.cart-nav {
 		margin-top: 10px;
 		padding: 10px;

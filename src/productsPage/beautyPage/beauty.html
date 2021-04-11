@@ -1,76 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Product page of Sabka Bazaar where user can go through various products and also product categories in the menu bar">
-    
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <meta name="description"
+        content="Product page of Sabka Bazaar where user can go through various products and also product categories in the menu bar">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="../../styles/css/external/reset.css">
     <link rel="stylesheet" href="../../styles/css/external/util.css">
     <link rel="stylesheet" href="../../styles/css/navbar.css">
     <link rel="stylesheet" href="../../styles/css/productNavbar.css">
 
     <link rel="stylesheet" href="../../styles/css/products.css">
-    
+
     <title>Products | SABKA BAZAAR</title>
 </head>
-<body>
-    <nav class="main-nav">
-        <section class="container d-flex space-between">
-            <img src="../../../../static/images/logo.png" class="main-logo" alt="sabka-bazaar-logo">
-            
-            <section class="nav-links-section d-flex-column">
-                <div class="nav-auth">
-                    <ul>
-                        <li class="d-inline-block"><a href="../../authPage/loginPage/login.html">SignIn</a></li>
-                        <li class="d-inline-block"><a href="../../authPage/registerPage/register.html">Register</a></li>
-                    </ul>
-                </div>
-                <div class="nav-pages d-flex space-between align-items-center">
-                    <div class="main-pages-nav">
+
+<body class="product-page">
+    <header>
+        <nav class="main-nav">
+            <section class="container d-flex space-between">
+                <img src="../../../../static/images/logo.png" class="main-logo" alt="sabka-bazaar-logo">
+
+                <section class="nav-links-section d-flex-column">
+                    <div class="nav-auth">
                         <ul>
-                            <li class="d-inline-block"><a href="../../homePage/home.html">Home</a></li>
-                            <li class="d-inline-block"><a href="../../productsPage/fruitsPage/fruits.html">Products</a></li>
+                            <li class="d-inline-block"><a href="../../authPage/loginPage/login.html">SignIn</a></li>
+                            <li class="d-inline-block"><a href="../../authPage/registerPage/register.html">Register</a>
+                            </li>
                         </ul>
                     </div>
-                    <a class="cart-nav" href="../../cartPage/cart.html">
-                        <div>
-                            <img src="../../../../static/images/cart.svg" class="cart-logo d-inline-block" alt="cart-logo">
+                    <div class="nav-pages d-flex space-between align-items-center">
+                        <div class="main-pages-nav">
+                            <ul>
+                                <li class="d-inline-block"><a href="../../homePage/home.html">Home</a></li>
+                                <li class="d-inline-block"><a href="../allProductsPage/allProducts.html">Products</a>
+                                </li>
+                            </ul>
                         </div>
-                        <span class="cart-items d-inline-block">0 Items</span>
+                        <a class="cart-nav cart-nav-tablet" href="../../cartPage/cart.html">
+                            <div>
+                                <img src="../../../../static/images/cart.svg" class="cart-logo d-inline-block"
+                                    alt="cart-logo">
+                            </div>
+                            <span class="cart-items d-inline-block">0 Items</span>
+                        </a>
+                        <div tabindex="0" class="cart-nav cart-nav-desktop" onclick="loadCart()">
+                            <div>
+                                <img src="../../../../static/images/cart.svg" class="cart-logo d-inline-block"
+                                    alt="cart-logo">
+                            </div>
+                            <span class="cart-items d-inline-block">0 Items</span>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </nav>
+
+        <!-- main nav mobile -->
+        <nav class="main-nav-mob">
+            <section class="d-flex space-between">
+                <a href="../../homePage/home.html">
+                    <img src="../../../static/images/logo.png" class="main-logo" alt="sabka-bazaar-logo">
+                </a>
+
+                <div class="hamburger-menu d-flex align-items-center">
+                    <a onclick="hamburgerToggle()">
+                        <i class="fa fa-bars fa-2x"></i>
                     </a>
                 </div>
+
+                <a href="../../cartPage/cart.html" class="cart-nav cart-mob">
+                    <div>
+                        <img src="../../../static/images/cart.svg" class="cart-logo d-inline-block" alt="cart-logo">
+                    </div>
+                    <span class="cart-items d-inline-block">0 Items</span>
+                </a>
             </section>
-        </section>    
-    </nav>
-
-    <!-- main nav mobile -->
-    <nav class="main-nav-mob">
-        <section class="d-flex space-between">
-            <a href="../../homePage/home.html">
-                <img src="../../../static/images/logo.png" class="main-logo" alt="sabka-bazaar-logo">
-            </a>
-
-            <a href="../../cartPage/cart.html" class="cart-nav cart-mob">
-                <div>
-                    <img src="../../../static/images/cart.svg" class="cart-logo d-inline-block" alt="cart-logo">
-                </div>
-                <span class="cart-items d-inline-block">0 Item</span>
-            </a>
-        </section>    
-    </nav>
-
+        </nav>
+        <div class="mob-nav-dropdown text-align-center">
+            <ul class="hambuger-list">
+                <li>
+                    <a href="../../homePage/home.html">Home</a>
+                </li>
+                <li>
+                    <a href="../allProductsPage/allProducts.html">Products</a>
+                </li>
+                <li>
+                    <a href="../../authPage/loginPage/login.html">SignOut</a>
+                </li>
+            </ul>
+        </div>
+    </header>
     <!-- End of Navbar -->
+    
     <!-- Begining of products navbar mobile -->
     <nav class="products-nav-mobile">
         <div class="mobile-navbar container">
             <div class="d-flex space-between align-items-center ">
                 <h1 class="nav-logo">Beauty and Hygiene</h1>
-                <button onclick="openCloseMenu()" class="menu-bar app-btn"><i class="fas fa-chevron-down fa-2x"></i></button>   
+                <button onclick="openCloseMenu()" aria-label="menu" class="menu-bar app-btn">
+                    <i id="icon" class="fas fa-chevron-down fa-2x"></i>
+                </button>
             </div>
-            
+
             <div class="drop-nav">
                 <ul class="mobile-nav-list">
                     <li>
@@ -89,8 +126,8 @@
                         <a href="../babyPage/baby.html">Baby Care</a>
                     </li>
                 </ul>
-            </div>            
-        </div> 
+            </div>
+        </div>
     </nav>
 
     <!-- Main content with side menu -->
@@ -101,142 +138,72 @@
                     <li>
                         <a href="../fruitsPage/fruits.html">Fruits & Vegetables</a>
                     </li>
-                    <hr class="hr-style grey"><li>
+                    <li>
+                        <hr class="hr-style grey">
+                    </li>
+                    <li>
                         <a href="../bakeryPage/bakery.html">Bakery Cakes and Dairy</a>
                     </li>
-                    <hr class="hr-style grey">
+                    <li>
+                        <hr class="hr-style grey">
+                    </li>
                     <li class="margin-y-t-1">
                         <a href="../beveragePage/beverage.html">Beverages</a>
                     </li>
-                    <hr class="hr-style grey">
+                    <li>
+                        <hr class="hr-style grey">
+                    </li>
                     <li class="margin-y-t-1">
                         <a href="../beautyPage/beauty.html">Beauty and Hygiene</a>
                     </li>
-                    <hr class="hr-style grey">
+                    <li>
+                        <hr class="hr-style grey">
+                    </li>
                     <li class="margin-y-t-1">
                         <a href="../babyPage/baby.html">Baby Care</a>
                     </li>
-                    <hr class="hr-style grey">
+                    <li>
+                        <hr class="hr-style grey">
+                    </li>
                 </ul>
             </div>
         </nav>
 
         <!-- Main content Begins -->
-        <main>
-            <section class="card-section">
-                <div class="cards">
-                    <div class="card-heading">
-                        <h2>Listerine Mouthwash - Cool Mint, 250 ml</h2>
-                    </div>
-                    <div class="card-contents d-flex">
-                        <img src="../../../static/images/products/beauty-hygiene/listerine.jpg" alt="mouthwash" class="product-img">
-                        <div class="card-details">
-                            <div class="card-text">
-                                Listerine Cool mint Antibacterial Mouthwash is rapid & easy to use, a 30 
-                                second \"slosh\" with Listerine after brushing and flossing reaches parts of 
-                                the mouth that may be missed. Used two times daily, Listerine provides 
-                                24-hour defence against plaque and lasting bright breath assurance.
-                            </div>
-                            <button class="app-btn buy-btn">Buy Now @ Rs.109</button>
-                            <div class="buy-button-desktop">
-                                <span class="rate">MRP Rs.109</span>
-                                <button class="app-btn buy-btn-desktop">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="app-btn buy-btn-tablet">Buy Now @ Rs.109</button>
-                </div>
-                <div class="cards">
-                    <div class="card-heading">
-                        <h2>TRESemme Shampoo - Keratin Smooth With Argan Oil, 580 ml</h2>
-                    </div>
-                    <div class="card-contents d-flex">
-                        <img src="../../../static/images/products/beauty-hygiene/shampoo.jpg" alt="shampoo" class="product-img">
-                        <div class="card-details">
-                            <div class="card-text">
-                                For the first time, at TRESemme , Our Professional combines luxurious ingredients to give 
-                                you gorgeously smoother shiny hair every day , infused with keratin protein and lightweight 
-                                argan oil , our advanced keratin smooth system gently nourishes hair and controls frizz 
-                                for up to 3 days.
-                            </div>
-                            <button class="app-btn buy-btn">Buy Now @ Rs.410</button>
-                            <div class="buy-button-desktop">
-                                <span class="rate">MRP Rs.410</span>
-                                <button class="app-btn buy-btn-desktop">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="app-btn buy-btn-tablet">Buy Now @ Rs.410</button>
-                </div>
-                <div class="cards">
-                    <div class="card-heading">
-                        <h2>Dove Intense Repair Shampoo 650ml + Bathing Bar Soap Cream Beauty 100G Pack of 3</h2>
-                    </div>
-                    <div class="card-contents d-flex">
-                        <img src="../../../static/images/products/beauty-hygiene/dove.jpg" alt="dove-soap" class="product-img">
-                        <div class="card-details">
-                            <div class="card-text">
-                                Dove Cream Beauty Bar combines a gentle cleansing formula with Doves signature 1/4 
-                                moisturizing cream to give you softer, smoother and more glowing skin.
-                            </div>
-                            <button class="app-btn buy-btn">Buy Now @ Rs.622</button>
-                            <div class="buy-button-desktop">
-                                <span class="rate">MRP Rs.622</span>
-                                <button class="app-btn buy-btn-desktop">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="app-btn buy-btn-tablet">Buy Now @ Rs.622</button>
-                </div>
-                <div class="cards">
-                    <div class="card-heading">
-                        <h2>Premier Facial Tissue - Special, 400 pcs</h2>
-                    </div>
-                    <div class="card-contents d-flex">
-                        <img src="../../../static/images/products/beauty-hygiene/tissues.jpg" alt="tissues" class="product-img">
-                        <div class="card-details">
-                            <div class="card-text">
-                                Let your beautiful face stay clean Here Premier Special Face Tissues are available, 
-                                mostly prepared targeting to care for your face which has spongy and delicate skin.
-                            </div>
-                            <button class="app-btn buy-btn">Buy Now @ Rs.270</button>
-                            <div class="buy-button-desktop">
-                                <span class="rate">MRP Rs.270</span>
-                                <button class="app-btn buy-btn-desktop">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="app-btn buy-btn-tablet">Buy Now @ Rs.270</button>
-                </div>
-                <div class="cards">
-                    <div class="card-heading">
-                        <h2>Close Up Ever Fresh Red Hot Gel Toothpaste, 150 gm</h2>
-                    </div>
-                    <div class="card-contents d-flex">
-                        <img src="../../../static/images/products/beauty-hygiene/closeup.jpg" alt="toothpaste" class="product-img">
-                        <div class="card-details">
-                            <div class="card-text">
-                                Closeup's unique Active Zinc Mouthwash not only cleans deep corners of your mouth of 
-                                residual germs it also gives you upto 12 Hours Fresh Breath.
-                            </div>
-                            <button class="app-btn buy-btn">Buy Now @ Rs.82</button>
-                            <div class="buy-button-desktop">
-                                <span class="rate">MRP Rs.82</span>
-                                <button class="app-btn buy-btn-desktop">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="app-btn buy-btn-tablet">Buy Now @ Rs.82</button>
-                </div>
+        
+        <div class="cards-container">
+            <section id="products" class="cards-section">
+                    <!-- Fetched from Server -->
             </section>
-        </main>
+        </div>
+
     </section>
-    
+
     <footer>
         <div class="product-footer">
             Copyright © 2011-2018 Sabka Bazaar Grocery Supplies Pvt Ltd
         </div>
     </footer>
-    <script src="../../utils/productNavbar.js"></script>
+
+    <div id="mini-cart-section" class="mini-cart-section">
+        <nav class="mini-cart-nav">
+            <div class="d-flex space-between align-items-center ">
+                <h1 class="nav-logo-cart">My Cart <span>(<span class="cart-items">0 items</span>)</span></h1>
+                <a class="close-btn"><i class="fal fa-times fa-2x"></i></a>
+            </div>
+        </nav>
+        <div id="mini-cart" class="mini-cart">
+
+        </div>
+    </div>
+
+    <div id="modal-background" class="modal-background">
+
+    </div>
+
+    <script src="../productNavbar.js"></script>
+    <script src="../../cartPage/miniCart.js"></script>
+    <script src="./beauty.js" type="module"></script>
 </body>
+
 </html>

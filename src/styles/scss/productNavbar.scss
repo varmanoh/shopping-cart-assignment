@@ -5,6 +5,15 @@
 	padding: 10px 0;
 	display: block;
 }
+.menu-bar {
+	background-color: #d00256;
+	&:hover {
+		background-color: #d00256;
+	}
+	&:active {
+		background-color: #d00256;
+	}
+}
 .nav-logo {
 	font-weight: 500;
 	font-size: 1.3rem;
@@ -31,10 +40,12 @@
 .desktop-nav-list {
 	li {
 		font-size: 0.9rem;
-		padding: 10px 20px;
-		margin-top: 10px;
+		margin: 10px 0;
 	}
 	a {
+		display: block;
+		margin-right: 5px;
+		padding: 10px;
 		color: #666666;
 	}
 }

@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="../../styles/css/external/util.css">
     <link rel="stylesheet" href="../../styles/css/navbar.css">
     <link rel="stylesheet" href="../../styles/css/productNavbar.css">
-
     <link rel="stylesheet" href="../../styles/css/products.css">
 
     <title>Products | SABKA BAZAAR</title>
@@ -38,8 +37,7 @@
                         <div class="main-pages-nav">
                             <ul>
                                 <li class="d-inline-block"><a href="../../homePage/home.html">Home</a></li>
-                                <li class="d-inline-block"><a href="../allProductsPage/allProducts.html">Products</a>
-                                </li>
+                                <li class="d-inline-block"><a href="./allProducts.html">Products</a></li>
                             </ul>
                         </div>
                         <a class="cart-nav cart-nav-tablet" href="../../cartPage/cart.html">
@@ -102,8 +100,8 @@
     <nav class="products-nav-mobile">
         <div class="mobile-navbar container">
             <div class="d-flex space-between align-items-center ">
-                <h1 class="nav-logo">Baby Care</h1>
-                <button onclick="openCloseMenu()" aria-label="menu" class="menu-bar app-btn" id="toggleMenu">
+                <h1 class="nav-logo">All Products</h1>
+                <button onclick="openCloseMenu()" aria-label="menu" class="menu-bar app-btn">
                     <i id="icon" class="fas fa-chevron-down fa-2x"></i>
                 </button>
             </div>
@@ -124,6 +122,9 @@
                     </li>
                     <li class="margin-y-t-1">
                         <a href="../beveragePage/beverage.html">Beverages</a>
+                    </li>
+                    <li class="margin-y-t-1">
+                        <a href="../babyPage/baby.html">Baby Care</a>
                     </li>
                 </ul>
             </div>
@@ -170,11 +171,13 @@
         </nav>
 
         <!-- Main content Begins -->
+        
         <div class="cards-container">
             <section id="products" class="cards-section">
                 <!-- Fetched from Server -->
             </section>
         </div>
+
     </section>
 
     <footer>
@@ -201,7 +204,7 @@
 
     <script src="../productNavbar.js"></script>
     <script src="../../cartPage/miniCart.js"></script>
-    <script src="./baby.js" type="module"></script>
+    <script src="./allProducts.js" type="module"></script>
 </body>
 
 </html>

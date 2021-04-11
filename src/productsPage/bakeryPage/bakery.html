@@ -1,76 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Product page of Sabka Bazaar where user can go through various products and also product categories in the menu bar">
-    
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <meta name="description"
+        content="Product page of Sabka Bazaar where user can go through various products and also product categories in the menu bar">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="../../styles/css/external/reset.css">
     <link rel="stylesheet" href="../../styles/css/external/util.css">
     <link rel="stylesheet" href="../../styles/css/navbar.css">
     <link rel="stylesheet" href="../../styles/css/productNavbar.css">
 
     <link rel="stylesheet" href="../../styles/css/products.css">
-    
+
     <title>Products | SABKA BAZAAR</title>
 </head>
-<body>
-    <nav class="main-nav">
-        <section class="container d-flex space-between">
-            <img src="../../../../static/images/logo.png" class="main-logo" alt="sabka-bazaar-logo">
-            
-            <section class="nav-links-section d-flex-column">
-                <div class="nav-auth">
-                    <ul>
-                        <li class="d-inline-block"><a href="../../authPage/loginPage/login.html">SignIn</a></li>
-                        <li class="d-inline-block"><a href="../../authPage/registerPage/register.html">Register</a></li>
-                    </ul>
-                </div>
-                <div class="nav-pages d-flex space-between align-items-center">
-                    <div class="main-pages-nav">
+
+<body class="product-page">
+    <header>
+        <nav class="main-nav">
+            <section class="container d-flex space-between">
+                <img src="../../../../static/images/logo.png" class="main-logo" alt="sabka-bazaar-logo">
+
+                <section class="nav-links-section d-flex-column">
+                    <div class="nav-auth">
                         <ul>
-                            <li class="d-inline-block"><a href="../../homePage/home.html">Home</a></li>
-                            <li class="d-inline-block"><a href="../../productsPage/fruitsPage/fruits.html">Products</a></li>
+                            <li class="d-inline-block"><a href="../../authPage/loginPage/login.html">SignIn</a></li>
+                            <li class="d-inline-block"><a href="../../authPage/registerPage/register.html">Register</a>
+                            </li>
                         </ul>
                     </div>
-                    <a class="cart-nav" href="../../cartPage/cart.html">
-                        <div>
-                            <img src="../../../../static/images/cart.svg" class="cart-logo d-inline-block" alt="cart-logo">
+                    <div class="nav-pages d-flex space-between align-items-center">
+                        <div class="main-pages-nav">
+                            <ul>
+                                <li class="d-inline-block"><a href="../../homePage/home.html">Home</a></li>
+                                <li class="d-inline-block"><a href="../allProductsPage/allProducts.html">Products</a>
+                                </li>
+                            </ul>
                         </div>
-                        <span class="cart-items d-inline-block">0 Items</span>
+                        <a class="cart-nav cart-nav-tablet" href="../../cartPage/cart.html">
+                            <div>
+                                <img src="../../../../static/images/cart.svg" class="cart-logo d-inline-block"
+                                    alt="cart-logo">
+                            </div>
+                            <span class="cart-items d-inline-block">0 Items</span>
+                        </a>
+                        <div tabindex="0" class="cart-nav cart-nav-desktop" onclick="loadCart()">
+                            <div>
+                                <img src="../../../../static/images/cart.svg" class="cart-logo d-inline-block"
+                                    alt="cart-logo">
+                            </div>
+                            <span class="cart-items d-inline-block">0 Items</span>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </nav>
+
+        <!-- main nav mobile -->
+        <nav class="main-nav-mob">
+            <section class="d-flex space-between">
+                <a href="../../homePage/home.html">
+                    <img src="../../../static/images/logo.png" class="main-logo" alt="sabka-bazaar-logo">
+                </a>
+
+                <div class="hamburger-menu d-flex align-items-center">
+                    <a onclick="hamburgerToggle()">
+                        <i class="fa fa-bars fa-2x"></i>
                     </a>
                 </div>
+
+                <a href="../../cartPage/cart.html" class="cart-nav cart-mob">
+                    <div>
+                        <img src="../../../static/images/cart.svg" class="cart-logo d-inline-block" alt="cart-logo">
+                    </div>
+                    <span class="cart-items d-inline-block">0 Items</span>
+                </a>
             </section>
-        </section>    
-    </nav>
-
-    <!-- main nav mobile -->
-    <nav class="main-nav-mob">
-        <section class="d-flex space-between">
-            <a href="../../homePage/home.html">
-                <img src="../../../static/images/logo.png" class="main-logo" alt="sabka-bazaar-logo">
-            </a>
-
-            <a href="../../cartPage/cart.html" class="cart-nav cart-mob">
-                <div>
-                    <img src="../../../static/images/cart.svg" class="cart-logo d-inline-block" alt="cart-logo">
-                </div>
-                <span class="cart-items d-inline-block">0 Item</span>
-            </a>
-        </section>    
-    </nav>
-
+        </nav>
+        <div class="mob-nav-dropdown text-align-center">
+            <ul class="hambuger-list">
+                <li>
+                    <a href="../../homePage/home.html">Home</a>
+                </li>
+                <li>
+                    <a href="../allProductsPage/allProducts.html">Products</a>
+                </li>
+                <li>
+                    <a href="../../authPage/loginPage/login.html">SignOut</a>
+                </li>
+            </ul>
+        </div>
+    </header>
     <!-- End of Navbar -->
+    
     <!-- Begining of products navbar mobile -->
     <nav class="products-nav-mobile">
         <div class="mobile-navbar container">
             <div class="d-flex space-between align-items-center ">
                 <h1 class="nav-logo">Bakery and Dairy</h1>
-                <button onclick="openCloseMenu()" class="menu-bar app-btn"><i class="fas fa-chevron-down fa-2x"></i></button>   
+                <button onclick="openCloseMenu()" aria-label="menu" class="menu-bar app-btn">
+                    <i id="icon" class="fas fa-chevron-down fa-2x"></i>
+                </button>
             </div>
-            
+
             <div class="drop-nav">
                 <ul class="mobile-nav-list">
                     <li>
@@ -89,8 +126,8 @@
                         <a href="../babyPage/baby.html">Baby Care</a>
                     </li>
                 </ul>
-            </div>            
-        </div> 
+            </div>
+        </div>
     </nav>
 
     <!-- Main content with side menu -->
@@ -101,114 +138,45 @@
                     <li>
                         <a href="../fruitsPage/fruits.html">Fruits & Vegetables</a>
                     </li>
-                    <hr class="hr-style grey"><li>
+                    <li>
+                        <hr class="hr-style grey">
+                    </li>
+                    <li>
                         <a href="../bakeryPage/bakery.html">Bakery Cakes and Dairy</a>
                     </li>
-                    <hr class="hr-style grey">
+                    <li>
+                        <hr class="hr-style grey">
+                    </li>
                     <li class="margin-y-t-1">
                         <a href="../beveragePage/beverage.html">Beverages</a>
                     </li>
-                    <hr class="hr-style grey">
+                    <li>
+                        <hr class="hr-style grey">
+                    </li>
                     <li class="margin-y-t-1">
                         <a href="../beautyPage/beauty.html">Beauty and Hygiene</a>
                     </li>
-                    <hr class="hr-style grey">
+                    <li>
+                        <hr class="hr-style grey">
+                    </li>
                     <li class="margin-y-t-1">
                         <a href="../babyPage/baby.html">Baby Care</a>
                     </li>
-                    <hr class="hr-style grey">
+                    <li>
+                        <hr class="hr-style grey">
+                    </li>
                 </ul>
             </div>
         </nav>
 
         <!-- Main content Begins -->
-        <main>
-            <section class="card-section">
-                <div class="cards">
-                    <div class="card-heading">
-                        <h2>Sandwich Bread - White, Chemical Free, 400 gm</h2>
-                    </div>
-                    <div class="card-contents d-flex">
-                        <img src="../../../static/images/products/bakery-cakes-dairy/bread.jpg" alt="sandwich" class="product-img">
-                        <div class="card-details">
-                            <div class="card-text">
-                                Freshly Baked bread is one of lifes greatest simple pleasures and at Bigbasket 
-                                we decided to give you just that. We start baking our breads once you order using 
-                                the finest ingredients available.
-                            </div>
-                            <button class="app-btn buy-btn">Buy Now @ Rs.32</button>
-                            <div class="buy-button-desktop">
-                                <span class="rate">MRP Rs.32</span>
-                                <button class="app-btn buy-btn-desktop">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="app-btn buy-btn-tablet">Buy Now @ Rs.32</button>
-                </div>
-                <div class="cards">
-                    <div class="card-heading">
-                        <h2>Organic Fresh Paneer, 200 gm</h2>
-                    </div>
-                    <div class="card-contents d-flex">
-                        <img src="../../../static/images/products/bakery-cakes-dairy/paneer.jpg" alt="paneer" class="product-img">
-                        <div class="card-details">
-                            <div class="card-text">
-                                Freshly Baked bread is one of lifes greatest simple pleasures and at Bigbasket we 
-                                deFresho Organic Milk is sourced from farms that have been certified organic for 
-                                over 8 years. All feed is naturally grown with no pesticides or fertilizers.
-                            </div>
-                            <button class="app-btn buy-btn">Buy Now @ Rs.98</button>
-                            <div class="buy-button-desktop">
-                                <span class="rate">MRP Rs.98</span>
-                                <button class="app-btn buy-btn-desktop">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="app-btn buy-btn-tablet">Buy Now @ Rs.98</button>
-                </div>
-                <div class="cards">
-                    <div class="card-heading">
-                        <h2>Epigamia Greek Yogurt - Blueberry, 90 gm Cup</h2>
-                    </div>
-                    <div class="card-contents d-flex">
-                        <img src="../../../static/images/products/bakery-cakes-dairy/yogurt-blue.jpg" alt="yogurt-blueberry" class="product-img">
-                        <div class="card-details">
-                            <div class="card-text">
-                                Epigama means in Ancient Greek meant a way to Formalize the relationship between 
-                                different nations. Epigamia greek yogurt is one of the most authentic yoghurts which 
-                                advocates a healthy lifestyle with delicious taste. An excellent source of protein without 
-                                the added fat.
-                            </div>
-                            <button class="app-btn buy-btn">Buy Now @ Rs.40</button>
-                            <div class="buy-button-desktop">
-                                <span class="rate">MRP Rs.40</span>
-                                <button class="app-btn buy-btn-desktop">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="app-btn buy-btn-tablet">Buy Now @ Rs.40</button>
-                </div>
-                <div class="cards">
-                    <div class="card-heading">
-                        <h2>Epigamia Greek Yogurt - Strawberry, 90 gm</h2>
-                    </div>
-                    <div class="card-contents d-flex">
-                        <img src="../../../static/images/products/bakery-cakes-dairy/yogurt-red.jpg" alt="yogurt-strawberry" class="product-img">
-                        <div class="card-details">
-                            <div class="card-text">
-                                Low Fat and High protein delicious and thick Greek Yogurt.
-                            </div>
-                            <button class="app-btn buy-btn">Buy Now @ Rs.40</button>
-                            <div class="buy-button-desktop">
-                                <span class="rate">MRP Rs.40</span>
-                                <button class="app-btn buy-btn-desktop">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="app-btn buy-btn-tablet">Buy Now @ Rs.40</button>
-                </div>
+       
+        <div class="cards-container">
+            <section id="products" class="cards-section">
+                    <!-- Fetched from Server -->
             </section>
-        </main>
+        </div>
+
     </section>
 
     <footer>
@@ -216,6 +184,26 @@
             Copyright © 2011-2018 Sabka Bazaar Grocery Supplies Pvt Ltd
         </div>
     </footer>
-    <script src="../../utils/productNavbar.js"></script>
+
+    <div id="mini-cart-section" class="mini-cart-section">
+        <nav class="mini-cart-nav">
+            <div class="d-flex space-between align-items-center ">
+                <h1 class="nav-logo-cart">My Cart <span>(<span class="cart-items">0 items</span>)</span></h1>
+                <a class="close-btn"><i class="fal fa-times fa-2x"></i></a>
+            </div>
+        </nav>
+        <div id="mini-cart" class="mini-cart">
+
+        </div>
+    </div>
+
+    <div id="modal-background" class="modal-background">
+
+    </div>
+
+    <script src="../productNavbar.js"></script>
+    <script src="../../cartPage/miniCart.js"></script>
+    <script src="./bakery.js" type="module"></script>
 </body>
+
 </html>

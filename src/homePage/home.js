@@ -1,27 +1,123 @@
+import { cart } from '../cartPage/cart.js';
 
-var slideIndex = 1;
-showSlides(slideIndex);
+(async function () {
+    //--------------- fetching products category --------------//
 
-function plusSlides(slideChange) {
-    showSlides(slideIndex += slideChange);
-}
+    let productCategories = document.getElementById('product-category-cards');
 
-function currentSlide(slideChange) {
-    showSlides(slideIndex = slideChange);
-}
-
-function showSlides(slideChange) {
-    var index;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    if (slideChange > slides.length) { slideIndex = 1 }
-    if (slideChange < 1) { slideIndex = slides.length }
-    for (index = 0; index < slides.length; index++) {
-        slides[index].style.display = "none";
+    const anchorTagPage = category => {
+        switch (category) {
+            case 'beverages':
+                return '/beveragePage/beverage.html';
+            case 'bakery-cakes-dairy':
+                return '/bakeryPage/bakery.html'
+            case 'beauty-hygiene':
+                return '/beautyPage/beauty.html'
+            case 'baby':
+                return '/babyPage/baby.html'
+            case 'fruit-and-veg':
+                return '/fruitsPage/fruits.html'
+        }
     }
-    for (index = 0; index < dots.length; index++) {
-        dots[index].className = dots[index].className.replace(" active", "");
+
+    const filteredData = (categoryBanner) => `
+        <article class="category-cards">
+            <img src="../..${categoryBanner.imageUrl}" alt="${categoryBanner.name}" class="category-img">
+            <div class="category-text">
+                <h2 class="category-heading">${categoryBanner.name}</h2>
+                <p>${categoryBanner.description}</p>
+                <a href="../productsPage${anchorTagPage(categoryBanner.key)}" class="app-btn btn-category">Explore ${categoryBanner.key}</a>
+            </div>
+        </article>
+    `;
+
+    const categoryCard = (categoryBanner) =>
+        categoryBanner.order > 0 ? filteredData(categoryBanner) : '';
+
+    await fetch('../../server/categories/index.get.json')
+        .then(response => response.json())
+        .then(categoryCards => {
+            productCategories.innerHTML = `
+                ${categoryCards.sort((a, b) => a.order - b.order).map(categoryCard).join('')}
+            `;
+        });
+
+
+    //--------------- fetching carousel img ----------------//
+    let banners = document.getElementById('banners');
+
+    const bannerImage = (banner) => `
+        <div class="mySlides fade">
+            <img src="../..${banner.bannerImageUrl}" alt="${banner.bannerImageAlt}" class="carousel-img">
+        </div>
+    `;
+
+    await fetch('../../server/banners/index.get.json')
+        .then(response => response.json())
+        .then(imgData => {
+            banners.innerHTML = `
+                ${imgData.map(bannerImage).join("")}
+            `;
+        });
+
+
+    //----------------------- carousel ------------------------//
+    let slideIndex = 1;
+    let index;
+    let dots = document.querySelectorAll(".dot");
+
+    showSlides(slideIndex);
+
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+
+    prevButton.addEventListener('keydown', event => {
+        if (event.key == 'Enter') {
+            plusSlides(-1);
+        }
+    });
+
+    nextButton.addEventListener('keydown', event => {
+        if (event.key == 'Enter') {
+            plusSlides(1);
+        }
+    });
+
+    prevButton.addEventListener('click', () => plusSlides(-1));
+    nextButton.addEventListener('click', () => plusSlides(1));
+
+    function plusSlides(slideChange) {
+        showSlides(slideIndex = parseInt(slideIndex) + parseInt(slideChange));
     }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-}
+
+    dots.forEach(el => el.addEventListener('keydown', event => {
+        if (event.key == 'Enter') {
+            currentSlide(event.target.getAttribute("data-el"));
+        }
+    }));
+
+    dots.forEach(el => el.addEventListener('click', event => currentSlide(event.target.getAttribute("data-el"))));
+
+    function currentSlide(slideChange) {
+        showSlides(slideIndex = slideChange);
+    }
+
+    function showSlides(slideChange) {
+        let slides = document.getElementsByClassName("mySlides");
+
+        if (slideChange > slides.length) { slideIndex = 1 }
+        if (slideChange < 1) { slideIndex = slides.length }
+        for (index = 0; index < slides.length; index++) {
+            slides[index].style.display = "none";
+        }
+        for (index = 0; index < dots.length; index++) {
+            dots[index].className = dots[index].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+
+    cart();
+
+})();
+

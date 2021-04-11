@@ -10,29 +10,30 @@
     <link rel="stylesheet" href="../styles/css/external/reset.css">
     <link rel="stylesheet" href="../styles/css/external/util.css">
     <link rel="stylesheet" href="../styles/css/navbar.css">
-    <link rel="stylesheet" href="../styles/css/emptyCart.css">
+    <link rel="stylesheet" href="../styles/css/miniCart.css">
 
     <title>Cart Page | Sabka Baazar</title>
 </head>
-<body class="empty-cart">
-    <nav class="empty-cart-nav">
-        <div class="d-flex space-between align-items-center ">
-            <h1 class="nav-logo">My Cart</h1>
-            <a href="../productsPage/fruitsPage/fruits.html" class="close-btn"><i class="fal fa-times"></i></a>   
-        </div>      
-    </nav>
 
-    <!-- End of Navbar -->
-
-    <section class="message-section">
-        <h2>No items in your cart</h2>
-        <p>Your favourite items are just a click away</p>
-    </section>   
+<body class="mini-cart-body">
     
-    <section class="end-btn text-align-center">
-        <a href="../homePage/home.html" class="app-btn checkout-btn">Start Shopping</a>    
+    <section id="items-section" class="items-section">
+        <section class="message-section">
+            <h2>No items in your cart</h2>
+            <p>Your favourite items are just a click away</p>
+        </section>
+    </section>
+
+    <section id="offer-detail" class="offer-detail d-flex flex-start align-items-center">
+        <img src="../../static/images/lowest-price.png" alt="lowest-price-img" height="40px" width="auto">
+        <p>You won't find it cheaper anywhere</p>
     </section>
     
-
+    <section class="checkout-section">
+    </section>
+    
+    <div class="app-btn checkout-btn-empty">Start Shopping</div>
+    
+    <script src="./cartDisplay.js" type="module"></script>
 </body>
 </html>

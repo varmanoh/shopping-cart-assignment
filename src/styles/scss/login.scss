@@ -24,7 +24,7 @@
 	margin: 15px 0;
 	label {
 		color: #808080;
-		display: block;
+		display: none;
 	}
 	input {
 		padding: 10px 0;
@@ -35,6 +35,9 @@
 		width: 100%;
 		&:focus {
 			border-color: #99d9ea;
+			&::placeholder {
+				color: transparent;
+			}
 		}
 	}
 	&:focus-within {
