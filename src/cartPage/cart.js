@@ -165,7 +165,6 @@ export let cart = async (x = '', y = '') => {
                     }
                     localStorage.setItem('productsInCart', JSON.stringify(cartItems));
 
-                    let cartCost = localStorage.getItem('totalCost');
                     if (cartCost != null) {
                         cartCost = parseInt(cartCost);
                         localStorage.setItem('totalCost', cartCost - cartObj.price);
