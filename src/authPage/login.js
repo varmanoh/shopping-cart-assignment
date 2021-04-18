@@ -1,10 +1,10 @@
 (function () {
     function toggleClass() {
-        let x = this.previousElementSibling;
-        if (x.style.display === "block") {
-            x.style.display = "none";
+        let labelElement = this.previousElementSibling;
+        if (labelElement.style.display === "block") {
+            labelElement.style.display = "none";
         } else {
-            x.style.display = "block";
+            labelElement.style.display = "block";
         }
     }
     
