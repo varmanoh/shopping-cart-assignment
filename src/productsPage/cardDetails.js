@@ -4,7 +4,7 @@ export const cardDetails = (card) => `
             <h2>${card.name}</h2>
         </div>
         <div class="card-contents d-flex">
-            <img src="../../..${card.imageURL}" alt="fruits" class="product-img">
+            <img src="../../..${card.imageURL}" alt="${card.name}" class="product-img">
             <div class="card-details">
                 <p class="card-text">
                     ${card.description}
@@ -16,6 +16,8 @@ export const cardDetails = (card) => `
                 </div>
             </div>
         </div>
-        <button class="app-btn buy-btn-tablet">Buy Now @ Rs.${card.price}</button>
+        <div class="card-tablet-btn">
+            <button class="app-btn buy-btn-tablet">Buy Now @ Rs.${card.price}</button>
+        </div>
     </div>
 `;

@@ -1,22 +1,6 @@
-(function () {
-    function toggleClass() {
-        let labelElement = this.previousElementSibling;
-        if (labelElement.style.display === "block") {
-            labelElement.style.display = "none";
-        } else {
-            labelElement.style.display = "block";
-        }
-    }
-    
-    const inputs = document.querySelectorAll('input');
-    
-    for (let i = 0; i < inputs.length; i++) {
-        let input = inputs[i];
-    
-        input.addEventListener('focusin', toggleClass);
-        input.addEventListener('focusout', toggleClass);
+    function loginSubmit() {
+        event.preventDefault();
+        window.location.href = `http://127.0.0.1:8080/src/homePage/home.html`;
     }
 
-    localStorage.clear()
-})();
-
+    localStorage.clear();

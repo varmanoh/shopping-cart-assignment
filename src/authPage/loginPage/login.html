@@ -64,19 +64,19 @@
             <p class="margin-y-t-3">Get access to your Orders, Wishlist and Recommendations</p>
         </section>
         <main class="login-form">
-            <form onsubmit="event.preventDefault();">       
+            <form onsubmit="loginSubmit();">       
                 <div class="form-element">
                     <label for="email" class="control-label">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Email"> 
+                    <input type="email" id="email" placeholder="Email" required> 
                 </div>
 
                 <div class="form-element">
                     <label for="password" class="control-label">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Password">
+                    <input type="password" id="password" placeholder="Password" required>
                 </div>
 
                 <div class="form-element">
-                    <button onclick="window.location.href=`../../homePage/home.html`" class="app-btn submit-btn">Login</button>
+                    <button class="app-btn submit-btn">Login</button>
                 </div>
 
             </form>

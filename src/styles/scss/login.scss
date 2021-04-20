@@ -23,7 +23,6 @@
 .form-element {
 	margin: 15px 0;
 	label {
-		color: #808080;
 		display: none;
 	}
 	input {
@@ -43,6 +42,7 @@
 	&:focus-within {
 		.control-label {
 			color: #00c6fd;
+			display: block;
 		}
 	}
 }

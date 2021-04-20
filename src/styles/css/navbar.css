@@ -67,8 +67,10 @@ a {
   .cart-nav {
     margin-top: 10px;
     padding: 10px;
-    justify-content: center;
+    justify-content: flex-start;
     width: 20%; }
+  .cart-items {
+    margin-left: 5px; }
   .main-logo {
     margin-top: 6px;
     height: 70px;

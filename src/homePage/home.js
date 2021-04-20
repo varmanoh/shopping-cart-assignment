@@ -64,22 +64,24 @@ import { cart } from '../cartPage/cart.js';
     //----------------------- carousel ------------------------//
     let slideIndex = 1;
     let index;
-    let dots = document.querySelectorAll(".dot");
+    let dots = document.querySelectorAll(".slideshow-container .dot");
 
     showSlides(slideIndex);
 
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
+    const prevButton = document.querySelector('.slideshow-container .prev');
+    const nextButton = document.querySelector('.slideshow-container .next');
 
     prevButton.addEventListener('keydown', event => {
         if (event.key == 'Enter') {
             plusSlides(-1);
+            event.preventDefault();
         }
     });
 
     nextButton.addEventListener('keydown', event => {
         if (event.key == 'Enter') {
             plusSlides(1);
+            event.preventDefault();
         }
     });
 
@@ -87,6 +89,7 @@ import { cart } from '../cartPage/cart.js';
     nextButton.addEventListener('click', () => plusSlides(1));
 
     function plusSlides(slideChange) {
+        console.log(slideChange);
         showSlides(slideIndex = parseInt(slideIndex) + parseInt(slideChange));
     }
 

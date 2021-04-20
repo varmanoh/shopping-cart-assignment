@@ -14,18 +14,24 @@ h2 {
     font-weight: 600;
 }
 
-body {
+body, html {
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 footer {
     background-color: #d2d2d2;
     padding: 10px 5px;
     font-size: 0.73rem;
 }
+
 .container{
     width:96%;
-    margin:auto;
+    margin: 0 auto;
     padding: 2px 10px 0 10px;
+    display: block;
+    flex: 1 0 auto;
 }
 .container-2{
     width:80%;
@@ -48,7 +54,7 @@ footer {
     display: inline-block;
 }
 .space-between{
-    justify-content:space-between ;
+    justify-content: space-between ;
 }
 .space-around{
     justify-content: space-around ;
@@ -108,7 +114,7 @@ footer {
     color:#ffff
 }
 .grey{
-    color: #777777;
+    color: #a7a7a7;
 }
 .small-font{
     font-size:0.9rem;
@@ -135,10 +141,10 @@ footer {
     text-align: center;
 }
 .hr-style {
-    color: #ccc;
+    color: #a7a7a7;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #a7a7a7;
 }
 .sr-only {
     position:absolute;
