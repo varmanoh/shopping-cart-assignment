@@ -29,7 +29,7 @@
 .slideshow-container {
 	position: relative;
 	margin: 20px auto;
-	box-shadow: 0px 10px 5px -5px #CCCCCC;
+	box-shadow: $box-shadow;
 }
 /* Next & previous buttons */
 .prev, .next {
@@ -61,7 +61,7 @@
 	align-items: center;
 	margin-top: 25px;
 	padding-bottom: 10px;
-	box-shadow: 0px 10px 5px -5px #CCCCCC;
+	box-shadow: $box-shadow;
 	&:nth-child(even) {
 		flex-direction: row-reverse;
 	}
