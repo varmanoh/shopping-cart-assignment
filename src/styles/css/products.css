@@ -144,7 +144,7 @@ h1.nav-logo-cart {
     text-align: left;
     padding-left: 180px; } }
 
-@media (min-width: 1020px) {
+@media (min-width: 1026px) {
   .cart-nav-tablet {
     display: none; }
   .cart-nav-desktop {

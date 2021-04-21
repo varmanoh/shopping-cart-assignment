@@ -4,7 +4,7 @@ nav {
 a {
   margin-left: 5px;
   cursor: pointer;
-  color: black;
+  color: #000;
   text-decoration: none; }
 
 .main-logo {
@@ -78,7 +78,7 @@ a {
   .nav-links-section {
     margin-left: 15px; } }
 
-@media (min-width: 1255px) {
+@media (min-width: 1026px) {
   .container {
     width: 75%; }
   a {

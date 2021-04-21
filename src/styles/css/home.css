@@ -170,7 +170,7 @@ h1.nav-logo-cart {
     font-size: 0.75rem;
     margin: 30px auto; } }
 
-@media (min-width: 1255px) {
+@media (min-width: 1026px) {
   .cart-nav-tablet {
     display: none; }
   .cart-nav-desktop {

@@ -1,17 +1,19 @@
+@import 'vars';
+
 .products-nav-mobile {
-	background-color: #d00256;
-	color: #ffff;
+	background-color: $color-buttonRed;
+	color: $color-white;
 	margin: 20px 0;
 	padding: 10px 0;
 	display: block;
 }
 .menu-bar {
-	background-color: #d00256;
+	background-color: $color-buttonRed;
 	&:hover {
-		background-color: #d00256;
+		background-color: $color-buttonRed;
 	}
 	&:active {
-		background-color: #d00256;
+		background-color: $color-buttonRed;
 	}
 }
 .nav-logo {
@@ -27,14 +29,14 @@
 		a {
 			font-size: 1.1rem;
 			font-weight: 500;
-			color: #ffff;
+			color: $color-white;
 			cursor: pointer;
 		}
 	}
 }
 .products-nav {
 	display: none;
-	background-color: #d2d2d2;
+	background-color: $color-shadowGrey;
 	flex-basis: 30%;
 }
 .desktop-nav-list {
@@ -49,7 +51,7 @@
 		color: #4d4d4d;
 	}
 }
-@media (min-width: 480px) {
+@media (min-width: $mobile-max-width) {
 	.products-nav-mobile {
 		display: none;
 	}

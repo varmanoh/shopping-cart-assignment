@@ -1,6 +1,6 @@
 .products-nav-mobile {
   background-color: #d00256;
-  color: #ffff;
+  color: #fff;
   margin: 20px 0;
   padding: 10px 0;
   display: block; }
@@ -23,7 +23,7 @@
 .mobile-nav-list li a {
   font-size: 1.1rem;
   font-weight: 500;
-  color: #ffff;
+  color: #fff;
   cursor: pointer; }
 
 .products-nav {
